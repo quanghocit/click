@@ -1,0 +1,167 @@
+{
+  "name": "tracking",
+  "plural": "tracking",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "campaign_id": {
+      "type": "number",
+      "required": false
+    },
+    "customer_id": {
+      "type": "string",
+      "required": false
+    },
+    "banner_id": {
+      "type": "string",
+      "required": false
+    },
+    "mac": {
+      "type": "string",
+      "required": false
+    },
+    "site_id": {
+      "type": "number",
+      "required": false
+    },
+    "click_id": {
+      "type": "string",
+      "required": false
+    },
+    "click_count": {
+      "type": "number",
+      "required": false
+    },
+    "user_type": {
+      "type": "string",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "email": {
+      "type": "string",
+      "required": false
+    },
+    "phone": {
+      "type": "string",
+      "required": false
+    },
+    "gender": {
+      "type": "string",
+      "required": false
+    },
+    "model": {
+      "type": "string",
+      "required": false
+    },
+    "browser": {
+      "type": "string",
+      "required": false
+    },
+    "os": {
+      "type": "string",
+      "required": false
+    },
+    "device": {
+      "type": "string",
+      "required": false
+    },
+    "survey01": {
+      "type": "string",
+      "required": false
+    },
+    "survey02": {
+      "type": "string",
+      "required": false
+    },
+    "survey03": {
+      "type": "string",
+      "required": false
+    },
+    "survey04": {
+      "type": "string",
+      "required": false
+    },
+    "survey05": {
+      "type": "string",
+      "required": false
+    },
+    "survey06": {
+      "type": "string",
+      "required": false
+    },
+    "survey07": {
+      "type": "string",
+      "required": false
+    },
+    "survey08": {
+      "type": "string",
+      "required": false
+    },
+    "survey09": {
+      "type": "string",
+      "required": false
+    },
+    "survey10": {
+      "type": "string",
+      "required": false
+    },
+    "survey11": {
+      "type": "string",
+      "required": false
+    },
+    "survey12": {
+      "type": "string",
+      "required": false
+    },
+    "survey13": {
+      "type": "string",
+      "required": false
+    },
+    "survey14": {
+      "type": "string",
+      "required": false
+    },
+    "survey15": {
+      "type": "string",
+      "required": false
+    },
+    "history01": {
+      "type": "text",
+      "required": false
+    },
+    "history02": {
+      "type": "text",
+      "required": false
+    },
+    "history03": {
+      "type": "text",
+      "required": false
+    },
+    "history04": {
+      "type": "text",
+      "required": false
+    },
+    "history05": {
+      "type": "text",
+      "required": false
+    },
+    "created_at": {
+      "type": "date",
+      "required": false
+    },
+    "updated_at": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
