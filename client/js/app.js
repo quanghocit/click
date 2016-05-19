@@ -6,42 +6,31 @@ angular
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
       $urlRouterProvider) {
     $stateProvider
-      .state('add-person', {
-        url: '/add-person',
-        templateUrl: 'views/person-form.html',
-        controller: 'AddReviewController',
+      .state('location', {
+        url: '/location',
+        templateUrl: 'views/location/location.html',
+        controller: 'Location',
         authenticate: true
       })
-      .state('home', {
-        url: '/home',
-        templateUrl: 'views/home.html',
-        controller: 'HomeCtrl'
+      .state('users', {
+        url: '/users',
+        templateUrl: 'views/users/users.html',
+        controller: 'Users'
       })
-      .state('report', {
-        url: '/report',
-        templateUrl: 'views/report.html',
-        controller: 'Report'
+      .state('news', {
+        url: '/news',
+        templateUrl: 'views/news/news.html',
+        controller: 'News'
       })
-      .state('chart', {
-        url: '/chart',
-        templateUrl: 'views/chart.html',
-        controller: 'AllReviewsController'
+      .state('calendar', {
+        url: '/calendar',
+        templateUrl: 'views/calendar/calendar.html',
+        controller: 'Calendar'
       })
-      .state('info', {
-        url: '/info',
-        templateUrl: 'views/info.html',
-        controller: 'AllReviewsController'
-      })
-      .state('edit-person', {
-        url: '/edit-person/:id',
-        templateUrl: 'views/person-form.html',
-        controller: 'EditReviewController',
-        authenticate: true
-      })
-      .state('delete-person', {
-        url: '/delete-person/:id',
-        controller: 'DeleteReviewController',
-        authenticate: true
+      .state('campaign', {
+        url: '/campaign',
+        templateUrl: 'views/campaign/campaign.html',
+        controller: 'Campaign'
       })
       .state('forbidden', {
         url: '/forbidden',
