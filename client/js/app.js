@@ -36,7 +36,7 @@ angular
         url: '/forbidden',
         templateUrl: 'views/forbidden.html',
       });
-    //$urlRouterProvider.otherwise('home');
+    $urlRouterProvider.otherwise('location');
   }])
   .run(['$rootScope', '$state', function($rootScope, $state) {
     $rootScope.$on('$stateChangeStart', function(event, next) {
