@@ -35,12 +35,5 @@
   "tracking": {
     "dataSource": "mysqlDs",
     "public": true
-  },
-  "users": {
-    "dataSource": "mysqlDs",
-    "public": true,
-    "options": {
-      "emailVerificationRequired": true
-    }
   }
 }
