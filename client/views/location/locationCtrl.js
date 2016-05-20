@@ -4,5 +4,6 @@
 angular
   .module('app')
   .controller('Location', ['$scope', 'Tracking', function ($scope, Tracking) {
-      console.log("Hello");
+    $('.none').addClass("hidden");
+    $('.location').removeClass("hidden");
   }]);
