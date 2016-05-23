@@ -1,0 +1,83 @@
+body,html{}
+
+.step1-ot{
+  min-height: 50px;
+  line-height: 50px;
+  background-color: #EBEBEB;
+  margin:5px auto;
+  padding-left: 50px;
+  padding-right: 10px;
+  width: 100%
+}
+.step1-ot:hover{
+  background-color: #2A86D1;
+  color: #ffffff
+}
+input[type=radio]:checked ~ .step1-ot {
+  background-color: #2A86D1;
+  color: #ffffff
+}
+
+input[type=radio]:checked ~ .step1-ot::before{
+  background-color: #EBEBEB;
+}
+.colorA5{
+  color: #A5A5A5;
+}
+
+.h360{
+  height: 360px;
+}
+
+.titlestep3{
+  height: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  padding-left: 10px;
+  background-color: #2985D0;
+}
+
+.margin5{
+  margin: 5px 5px;
+}
+
+.cusInput{
+  width: 100%;
+  background-color: #EBEBEB;
+  color: #333333;
+}
+
+.radioFormat input[type="radio"] {
+  display:none;
+}
+.radioFormat input[type="radio"] + label {
+  color: #292321;
+  font-family:Arial, sans-serif;
+  font-size:14px;
+}
+.radioFormat input[type="radio"] + label span {
+  display:inline-block;
+  width:19px;
+  height:19px;
+  margin:-1px 4px 0 0;
+  vertical-align:middle;
+  cursor:pointer;
+  -moz-border-radius:  50%;
+  border-radius:  50%;
+}
+
+.radioFormat input[type="radio"] + label span {
+  background-color:#292321;
+}
+
+.radioFormat input[type="radio"]:checked + label span{
+  background-color: #2985D0;
+}
+
+.radioFormat input[type="radio"] + label span,
+.radioFormat input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}

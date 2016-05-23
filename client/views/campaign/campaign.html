@@ -1,3 +1,205 @@
-<section>
-  Campaign
-</section>
+<div class="col-sm-8 col-sm-push-2 col-md-6 col-md-push-3" style="background-color:rgba(192,192,192,0.5); padding: 0px 0px;
+ margin: auto; margin-top: 30px;">
+  <div class="col-xs-4 text-center" style="background-color:rgba(49,176,213,0.7);
+    margin-left: 20px; border-radius: 0px 0px 10px 10px; height: 25px; line-height: 25px; margin-bottom: 5px; color: #ffffff">
+    Create Ads
+  </div>
+  <div class="clearfix"></div>
+  <div class="col-sm-4 hidden-xs" style="background-color: #585858; text-align: left; color: #ffffff; height: 400px;">
+    <div class="clearfix" style="margin: 15px 15px"></div>
+    <div class="checkbox">
+      <i class="fa fa-check-circle" style="font-size: 20px" id="campaign-icon"></i>
+      <label>
+        CAMPAIGN
+      </label><br/>
+      <label class="colorA5">
+        Objective
+      </label>
+
+      <div class="clearfix" style="margin: 15px 15px"></div>
+      <i class="fa fa-check-circle" style="font-size: 20px" id="adset-icon"></i>
+      <label class="control-label">
+        AD SET
+      </label><br/>
+      <label class="colorA5">Audience</label><br/>
+      <label class="colorA5">Location</label><br/>
+      <label class="colorA5">KPI & Schedule</label>
+
+      <div class="clearfix" style="margin: 15px 15px"></div>
+      <i class="fa fa-check-circle" style="font-size: 20px" id="ad-icon"></i>
+      <label>
+        AD
+      </label><br/>
+      <label class="colorA5">Creative</label>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-8" style="background-color: #ffffff; height: 400px; margin: 0;">
+    <!--Campaign-->
+    <div class="" id="step1" ng-show="showstep1">
+      <ul class="nav h360" style="overflow: auto">
+        <li class="">
+          <input type="radio" name="checkradio" id="op1" style="display: none" ng-model="option.step1" value="option1">
+          <label for="op1" class="step1-ot"><i class="fa fa-globe fa-lg"></i> &nbsp; &nbsp; &nbsp;Send people to website</label>
+        </li>
+        <li class="">
+          <input type="radio" name="checkradio" id="op2" style="display: none" ng-model="option.step1" value="option2">
+          <label for="op2" class="step1-ot"><i class="fa fa-play-circle-o fa-lg"></i> &nbsp; &nbsp; &nbsp;Get video
+            views</label>
+        </li>
+        <li class="">
+          <input type="radio" name="checkradio" id="op3" style="display: none" ng-model="option.step1" value="option3">
+          <label for="op3" class="step1-ot"><i class="fa fa-heartbeat fa-lg"></i> &nbsp; &nbsp; &nbsp;Get
+            engagement</label>
+        </li>
+        <li class="">
+          <input type="radio" name="checkradio" id="op4" style="display: none" ng-model="option.step1" value="option4">
+          <label for="op4" class="step1-ot"><i class="fa fa-group fa-lg"></i> &nbsp; &nbsp; &nbsp;Raise attendance at
+            your event</label>
+        </li>
+        <li class="">
+          <input type="radio" name="checkradio" id="op5" style="display: none" ng-model="option.step1" value="option5">
+          <label for="op5" class="step1-ot"><i class="fa fa-retweet fa-lg"></i> &nbsp; &nbsp; &nbsp;Get people to claim
+            your offer</label>
+        </li>
+        <li class="">
+          <input type="radio" name="checkradio" id="op6" style="display: none" ng-model="option.step1" value="option6">
+          <label for="op6" class="step1-ot"><i class="fa fa-file-text-o fa-lg"></i> &nbsp; &nbsp; &nbsp;Collect leads
+            for your business</label>
+        </li>
+      </ul>
+      <div class="col-xs-12" style="height: 40px; line-height: 40px;">
+        <span style="float: left">
+          1/2
+        </span>
+        <span style="float: right">
+          <button class="btn radius-50 btn-default btn-sm" style="width: 150px; margin-right: 0px" ng-click="next1_1()"
+                  id="next">Next
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="h360" ng-show="showstep1_1">
+      option1
+    </div>
+    <div class="h360" ng-show="showstep1_2">
+      <label for="op1" class="step1-ot" style="background-color: #2A86D1; color: #ffffff"><i
+        class="fa fa-globe fa-lg"></i> &nbsp; &nbsp; &nbsp;Send people to website</label>
+
+      <div class="col-xs-10 col-xs-push-1" style="background-color: #D2D2D2; padding: 0; margin: 0; border-radius: 5px">
+        <select class="form-control input-sm">
+          <option value="">Choose Brand or Enter New Brand</option>
+        </select>
+
+        <div class="col-xs-10 col-xs-push-1">
+          <input type="radio" name="brand" value="Yomost"/><label for=""> &nbsp; Yomost</label>
+          <br/>
+          <input type="radio" name="brand" value="X-men"/><label for=""> &nbsp; X-men</label>
+          <br/>
+          <input type="radio" name="brand" value="X-men Boss"/><label for=""> &nbsp; X-men Boss</label>
+        </div>
+      </div>
+    </div>
+    <div class="h360" ng-show="showstep1_3">
+      option3
+    </div>
+    <div class="h360" ng-show="showstep1_4">
+      option4
+    </div>
+    <div class="h360" ng-show="showstep1_5">
+      option5
+    </div>
+    <div class="h360" ng-show="showstep1_6">
+      option6
+    </div>
+    <div class="col-xs-12" style="height: 40px; line-height: 40px;" ng-show="next12">
+        <span style="float: left">
+          2/2
+        </span>
+        <span style="float: right">
+          <button class="btn radius-50 btn-gray btn-sm " style="" ng-click="back1()">
+            Back
+          </button>
+          <button class="btn radius-50 btn-default btn-sm" style="" ng-click="next1_2()">
+            Set Audience & Budget
+          </button>
+        </span>
+    </div>
+
+    <!--AD Set-->
+    <div>
+
+    </div>
+
+    <!--AD-->
+    <div class="h360" ng-show="step3">
+      <div id="format">
+        <div class="row titlestep3">
+          Format
+        </div>
+        <div class="col-xs-6">
+          <div class="radioFormat">
+            <input type="radio" id="stand" name="format" checked value="Standard" />
+            <label for="stand"><span></span>Standard Banner</label>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="radioFormat">
+            <input type="radio" id="rich" name="format" value="Rich"/>
+            <label for="rich"><span></span>Rich Banner</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div id="creative">
+        <div class="row titlestep3">
+          Creative
+        </div>
+        <div class="col-xs-12 margin5">
+          <div class="col-xs-4">- Mobile</div>
+          <div class="col-xs-8"><input type="text"></div>
+        </div>
+        <div class="col-xs-12 margin5">
+          <div class="col-xs-4">- Desktop</div>
+          <div class="col-xs-8"><input type="text"></div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div id="tracking">
+        <div class="row titlestep3">
+          Tracking Code
+        </div>
+        <div class="col-xs-12 margin5">
+          <div class="col-xs-4">- Mobile</div>
+          <div class="col-xs-8"><input type="text" class="cusInput"></div>
+        </div>
+        <div class="col-xs-12 margin5">
+          <div class="col-xs-4">- Desktop</div>
+          <div class="col-xs-8"><input type="text" class="cusInput"></div>
+        </div>
+        <div class="col-xs-12 margin5">
+          <div class="col-xs-4">- Landing page</div>
+          <div class="col-xs-8"><input type="text" class="cusInput"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12" style="height: 40px; line-height: 40px;" ng-show="next31">
+        <span style="float: right">
+          <button class="btn radius-50 btn-sm btn-gray" style="" ng-click="back3()">
+            Back
+          </button>
+          <button class="btn radius-50 btn-dark btn-sm" style="" ng-click="prebook()">
+            Preview Booking
+          </button>
+          <button class="btn radius-50 btn-default btn-sm" style="" ng-click="placebook()">
+            Place Booking
+          </button>
+        </span>
+    </div>
+  </div>
+</div>
