@@ -32,6 +32,11 @@ angular
         templateUrl: 'views/campaign/campaign.html',
         controller: 'Campaign'
       })
+      .state('report', {
+        url: '/report',
+        templateUrl: 'views/report/report.html',
+        controller: 'Report'
+      })
       .state('hotspot', {
         url: '/hotspot',
         templateUrl: 'views/hotspot/hotspot.html',
