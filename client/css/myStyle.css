@@ -1,8 +1,11 @@
 body,html{}
-
+.h410::-webkit-scrollbar-thumb{
+  background-color:#B03C3F;
+  border-radius:10px;
+}
 .step1-ot{
-  min-height: 50px;
-  line-height: 50px;
+  min-height: 55px;
+  line-height: 55px;
   background-color: #EBEBEB;
   margin:5px auto;
   padding-left: 50px;
@@ -25,8 +28,26 @@ input[type=radio]:checked ~ .step1-ot::before{
   color: #A5A5A5;
 }
 
-.h360{
-  height: 360px;
+.left{
+  float: left;
+  margin-left: 10px;
+}
+.right{
+  float: right;
+  margin-right: 10px;
+}
+
+.h410{
+  width: 100%;
+  height: 410px;
+}
+.h400{
+  height: 400px;
+}
+
+.selectCus{
+  background: none;
+  border:none;
 }
 
 .titlestep3{
@@ -41,6 +62,12 @@ input[type=radio]:checked ~ .step1-ot::before{
 .margin5{
   margin: 5px 5px;
 }
+.margin0{
+  margin: 0px 0px;
+}
+.padding0{
+  padding: 0px 0px;
+}
 
 .cusInput{
   width: 100%;
@@ -48,6 +75,14 @@ input[type=radio]:checked ~ .step1-ot::before{
   color: #333333;
   border: none;
   border-radius: 10px 10px;
+}
+
+.cusInput:focus {
+  outline: none;
+  border-radius: 10px 10px;
+  border: solid 1px #66afe9;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
 .radioFormat input[type="radio"] {
@@ -84,3 +119,100 @@ input[type=radio]:checked ~ .step1-ot::before{
   -moz-transition:background-color 0.4s linear;
   transition:background-color 0.4s linear;
 }
+
+.button_create_ads{
+  background-color: #EBEBEB;
+  border-radius: 15px 15px 15px 15px;
+  border: solid 0px;
+}
+.select_create_ads{
+  background-color: #EBEBEB;
+  border-radius: 15px 15px 15px 15px;
+  padding: 3.5px 3px 3.5px 10px;
+  border: solid 0px;
+  outline: none;
+}
+.select_location_create_ads{
+  background-color: #EBEBEB;
+  border-radius:15px 15px 15px 15px;
+  padding: 3.5px 30px 3.5px 15px;
+  border: solid 0px;
+  margin-left: 3px;
+  outline: none;
+}
+.select_location_create_ads:hover{
+  background-color: #CDCDCD;
+}
+.margin_create_ads{
+  margin: 10px 10px;
+}
+.label_radio_gender{
+  background-color: #EBEBEB;
+  border-radius: 15px 15px 15px 15px;
+  padding: 2px 15px;
+  margin-left: 3px;
+  font-weight: normal;;
+}
+input[type=radio]:checked ~ .label_radio_gender{
+  background-color: #2A86D1;
+  color: #ffffff
+}
+
+input[type=radio]:checked ~ .label_radio_gender::before{
+  background-color: #EBEBEB;
+}
+input[type=radio]:checked ~ .label_radio_device{
+  background-color: #2A86D1;
+  color: #ffffff
+}
+
+input[type=radio]:checked ~ .label_radio_device::before{
+  background-color: #EBEBEB;
+}
+.clear{
+  clear: both;
+}
+
+.input_create_ads{
+  background-color: #EBEBEB;
+  border-radius: 15px 15px 15px 15px;
+  padding: 3px 3px 3px 10px;
+  margin-left: 3px;
+  border:none;
+}
+.button_create_ads_rs {
+  background-color: #EBEBEB;
+  display: inline-block;
+  padding: 4px 25px 4px 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  border: solid 0px;
+}
+
+.button_create_ads_rs:hover {background-color: #EBEBEB;}
+
+.button_create_ads_rs:active {
+  background-color: #EBEBEB;
+  box-shadow: 0 5px #666;
+}
+
+.processing{
+  background-color: #ffffff;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  margin-top: 100px
+}
+
+.input_campaign{
+  background-color: #EBEBEB;
+  border-radius: 15px 15px 15px 15px;
+  padding: 3px 15px 3px 15px;
+  border: solid 0px;
+  margin: 5px 0px 0px 3px;
+}
+
