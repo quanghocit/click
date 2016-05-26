@@ -1,3 +1,162 @@
-<section>
-  Location
-</section>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-sm-12 hidden-xs">
+      <div class="row" id="map_view">
+        <div style="margin-right: 10px; margin-top: 10px; border-radius: 3px; box-shadow: 4px 4px 5px gray; z-index: 9999; position: absolute; width: 180px; height: 30px; background-color: white; text-align:center;right: 0px;border: 1px solid #c0c0c0;">
+          <button ng-click="showMapAll()" style="color: #0072c6; width: 90px; height: 30px; background-color: transparent; border: 0px;outline: none">Overview</button>
+        </div>
+        <div id="map" style="width:100%;height:100%"></div>
+      </div>
+    </div>
+    <div class="col-md-8 col-sm-12">
+      <!--location-->
+      <div class="row">
+        <div class="col-md-11" style="background-color: rgba(255,255,255,0.8);margin-top: 20px;margin-left:10px;">
+          <div class="row">
+            <div class="col-md-11" style="margin-left:15px;margin-bottom:10px;">
+              <div class="row">
+                <div style="width:250px;text-align: center;color:#ffffff;font-weight:bold;background-color: rgba(78,137,203,0.9);height:35px;line-height:35px;float:right;border-bottom-left-radius:20px;border-bottom-right-radius:20px">Location</div>
+                <p style="clear: both;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur aut eaque fugiat id iure, mollitia, nobis qui quos repellat, repudiandae sapiente unde voluptatum? Culpa, temporibus, tenetur! Eos, illo, tempore.</p>
+                <hr style="border-top:1px solid #cccccc">
+
+                <div class="col-sm-4" style="border:1px dotted #a5a6a6;padding:0 3px 0 3px;margin-bottom:10px;">
+                  <div style="border:none;margin: 3px 0px 3px 0px;background: #0b2815;width:auto;height:80px;position:relative;background:url(../images/wifi_public_bg.jpg) no-repeat center center;background-size:100% auto;">
+                    <img style="position:absolute;top:22%;left:5%" src="../images/person.png">
+                    <p style="font-size:15px;font-weight:bold;color:#ffffff;top:34%;left: 26%;position:absolute;width:50%;">Public Areas</p>
+                    <div style="text-align:center;position:absolute;top:33%;left:75%;border:1px solid #ffffff;border-radius:50%;width:30px;height:30px;background-color:#ffffff">
+                      <span style="font-weight:bold;vertical-align: middle;line-height:30px;color:#000000">56</span>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-4" style="border:1px dotted #a5a6a6;padding:0 3px 0 3px;margin-bottom:10px;">
+                <div style="border:none;margin: 3px 0px 3px 0px;background: #0b2815;width:auto;height:80px;position:relative;background:url(../images/coffee_shops_bg.jpg) no-repeat center center;background-size:100% auto;">
+                <img style="position:absolute;top:22%;left:5%" src="../images/coffee.png">
+                <p style="font-size:15px;font-weight:bold;color:#ffffff;top:34%;left: 26%;position:absolute;width:50%;">Coffee Shops</p>
+                <div style="text-align:center;position:absolute;top:33%;left:75%;border:1px solid #ffffff;border-radius:50%;width:30px;height:30px;background-color:#ffffff">
+                <span style="font-weight:bold;vertical-align: middle;line-height:30px;color:#000000">115</span>
+                </div>
+                </div>
+                </div>
+
+                <div class="col-sm-4" style="border:1px dotted #a5a6a6;padding:0 3px 0 3px;margin-bottom:10px;">
+                <div style="border:none;margin: 3px 0px 3px 0px;background: #0b2815;width:auto;height:80px;position:relative;background:url(../images/malls_bg.jpg) no-repeat center center;background-size:100% auto;">
+                <img style="position:absolute;top:22%;left:5%" src="../images/mall.png">
+                <p style="font-size:15px;font-weight:bold;color:#ffffff;top:34%;left: 26%;position:absolute">Malls</p>
+                <div style="text-align:center;position:absolute;top:33%;left:75%;border:1px solid #ffffff;border-radius:50%;width:30px;height:30px;background-color:#ffffff">
+                <span style="font-weight:bold;vertical-align: middle;line-height:30px;color:#000000">23</span>
+                </div>
+                </div>
+                </div>
+
+                <div class="col-sm-4" style="border:1px dotted #a5a6a6;padding:0 3px 0 3px;margin-bottom: 10px">
+                <div style="border:none;margin: 3px 0px 3px 0px;background: #0b2815;width:auto;height:80px;position:relative;background:url(../images/universities_bg.jpg) no-repeat center center;background-size:100% auto;">
+                <img style="position:absolute;top:22%;left:5%" src="../images/international.png">
+                <p style="font-size:15px;font-weight:bold;color:#ffffff;top:34%;left: 26%;position:absolute">Universities</p>
+                <div style="text-align:center;position:absolute;top:33%;left:75%;border:1px solid #ffffff;border-radius:50%;width:30px;height:30px;background-color:#ffffff">
+                <span style="font-weight:bold;vertical-align: middle;line-height:30px;color:#000000">33</span>
+                </div>
+                </div>
+                </div>
+
+                <div class="col-sm-4" style="border:1px dotted #a5a6a6;padding:0 3px 0 3px;margin-bottom: 10px">
+                <div style="border:none;margin: 3px 0px 3px 0px;background: #0b2815;width:auto;height:80px;position:relative;background:url(../images/airport_bg.jpg) no-repeat center center;background-size:100% auto;">
+                <img style="position:absolute;top:22%;left:5%" src="../images/airport.png">
+                <p style="font-size:15px;font-weight:bold;color:#ffffff;top:34%;left: 26%;position:absolute">Airports</p>
+                <div style="text-align:center;position:absolute;top:33%;left:75%;border:1px solid #ffffff;border-radius:50%;width:30px;height:30px;background-color:#ffffff">
+                <span style="font-weight:bold;vertical-align: middle;line-height:30px;color:#000000">7</span>
+                </div>
+                </div>
+                </div>
+
+                <div class="col-sm-4" style="border:1px dotted #a5a6a6;padding:0 3px 0 3px;margin-bottom: 10px">
+                <div style="border:none;margin: 3px 0px 3px 0px;background: #0b2815;width:auto;height:80px;position:relative;background:url(../images/bus_bg.jpg) no-repeat center center;background-size:100% auto;">
+                <img style="position:absolute;top:22%;left:5%" src="../images/bus.png">
+                <p style="font-size:15px;font-weight:bold;color:#ffffff;top:34%;left: 26%;position:absolute;width:50%;">Train & Bus Stations</p>
+                <div style="text-align:center;position:absolute;top:33%;left:75%;border:1px solid #ffffff;border-radius:50%;width:30px;height:30px;background-color:#ffffff">
+                <span style="font-weight:bold;vertical-align: middle;line-height:30px;color:#000000">73</span>
+                </div>
+                </div>
+                </div>
+
+                <div class="col-sm-4" style="border:1px dotted #a5a6a6;padding:0 3px 0 3px;margin-bottom: 10px">
+                <div style="border:none;margin: 3px 0px 3px 0px;background: #0b2815;width:auto;height:80px;position:relative;background:url(../images/hospitals_bg.jpg) no-repeat center center;background-size:100% auto;">
+                <img style="position:absolute;top:22%;left:5%" src="../images/hospital.png">
+                <p style="font-size:15px;font-weight:bold;color:#ffffff;top:34%;left: 26%;position:absolute;width:50%;">Hopitals</p>
+                <div style="text-align:center;position:absolute;top:33%;left:75%;border:1px solid #ffffff;border-radius:50%;width:30px;height:30px;background-color:#ffffff">
+                <span style="font-weight:bold;vertical-align: middle;line-height:30px;color:#000000">20</span>
+                </div>
+                </div>
+                </div>
+
+                <div class="col-sm-4" style="border:1px dotted #a5a6a6;padding:0 3px 0 3px;margin-bottom: 10px">
+                <div style="border:none;margin: 3px 0px 3px 0px;background: #0b2815;width:auto;height:80px;position:relative;background:url(../images/upcoming_bg.jpg) no-repeat center center;background-size:100% auto;">
+                <img style="position:absolute;top:22%;left:5%" src="../images/dangerous.png">
+                <p style="font-size:15px;font-weight:bold;color:#ffffff;top:34%;left: 26%;position:absolute;width:50%;">Upcoming</p>
+                <div style="text-align:center;position:absolute;top:33%;left:75%;border:1px solid #ffffff;border-radius:50%;width:30px;height:30px;background-color:#ffffff">
+                <span style="font-weight:bold;vertical-align: middle;line-height:30px;color:#000000">20</span>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!--Weather-->
+      <div class="row">
+        <div class="col-md-11" style="margin-top:20px;margin-left:10px;margin-bottom:10px">
+          <div class="row">
+            <div class="col-md-6" style="background-color:#FFAD00;border-top-left-radius:17px;border-top-right-radius:17px;border-bottom-left-radius:17px;border-bottom-right-radius:17px">
+              <div class="row" style="height:30px;background-color:#FFAD00;border-top-left-radius:17px;border-top-right-radius:17px">
+                <p style="text-align:center;line-height:30px;font-weight:bold;color:#ffffff">Weather Forecast</p>
+              </div>
+              <div class="row" style="background-color:#ffffff;border-radius:17px;position: relative">
+                <div class="col-md-12" style="margin-top:20px;margin-bottom:20px">
+                  <div class="row">
+                    <div style="background-color:#ffffff;float:left;width:30%;margin-left:4%;height:30px"><p></p></div>
+                    <div id="date"></div>
+                  </div>
+
+                  <div class="row">
+                    <div style="background-color:#ffffff;float:left;width:30%;margin-left:4%;color:#000000;font-weight:bold;font-size:12px;height:30px;line-height:30px">TP.Hồ Chí Minh</div>
+                    <div id="hochiminh_weather"></div>
+                  </div>
+
+                  <div class="row">
+                    <div style="background-color:#ffffff;float:left;width:30%;margin-left:4%;color:#000000;font-weight:bold;font-size:12px;height:30px;line-height:30px">Hà Nội</div>
+                    <div id="hanoi_weather"></div>
+                  </div>
+
+                  <div class="row">
+                    <div style="background-color:#ffffff;float:left;width:30%;margin-left:4%;color:#000000;font-weight:bold;font-size:12px;height:30px;line-height:30px">Đà Nẵng</div>
+                    <div id="danang_weather"></div>
+                  </div>
+
+                  <div class="row">
+                    <div style="background-color:#ffffff;float:left;width:30%;margin-left:4%;color:#000000;font-weight:bold;font-size:12px;height:30px;line-height:30px">Nha Trang</div>
+                    <div id="nhatrang_weather"></div>
+                  </div>
+
+                  <div class="row">
+                    <div style="background-color:#ffffff;float:left;width:30%;margin-left:4%;color:#000000;font-weight:bold;font-size:12px;height:30px;line-height:30px">Cần Thơ</div>
+                    <div id="cantho_weather"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-5 col-md-offset-1" style="background-color:#61AF59;border-top-left-radius:17px;border-top-right-radius:17px;border-bottom-left-radius:17px;border-bottom-right-radius:17px">
+              <div class="row" style="height:30px;background-color:#61AF59;border-top-left-radius:17px;border-top-right-radius:17px">
+                <p style="text-align:center;line-height:30px;font-weight:bold;color:#ffffff">Upcoming Events</p>
+              </div>
+              <div class="row" style="height:200px;background-color:#ffffff;border-radius:17px">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
