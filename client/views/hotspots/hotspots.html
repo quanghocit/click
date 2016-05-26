@@ -1,0 +1,229 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1" style="margin-top:20px;margin-bottom:20px;background-color: rgba(255,255,255,0.5)">
+      <div class="row">
+        <div style="width:250px;text-align: center;color:#ffffff;font-weight:bold;background-color: rgba(78,137,203,0.9);height:35px;line-height:35px;float:right;border-bottom-left-radius:20px;border-bottom-right-radius:20px;margin-right:5px">Hotspots</div>
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <div class="col-md-6">
+          <div class="row" style="background-color:#ffffff;margin-left:-10px;margin-right:-10px">
+            <div style="width:250px;text-align: center;color:#ffffff;font-weight:bold;background-color: rgb(255,193,60);height:35px;line-height:35px;border-bottom-left-radius:20px;border-bottom-right-radius:20px;margin:auto">Total Hotspots: <span>1900</span></div>
+            <div class="col-md-6" style="height:200px;margin-top:10px;margin-bottom:5px" id="city_chart"></div>
+            <div class="col-md-6" style="height:200px;margin-top:10px;margin-bottom:5px" id="category_chart"></div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="row" style="background-color:#ffffff;margin-left:-10px;margin-right:-10px">
+            <div style="width:200px;text-align: center;color:#ffffff;font-weight:bold;background-color: rgb(135,194,128);height:35px;line-height:35px;border-bottom-left-radius:20px;border-bottom-right-radius:20px;margin:auto">Top 10 Cities</div>
+
+            <div style="height:200px;margin-top:10px;margin-bottom:5px">
+              <ul class="list-group" style="max-height: 200px;overflow-y:scroll;">
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">English</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Art and Design</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Drama</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Music</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Physics</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Chemistry</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Biology</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Home economics</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Physical Education</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Computing Science</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">French</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">German</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Mandarin</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Religious Education</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Modern Studies</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Geography</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">History</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Creative computing</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Technology</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="row" style="background-color:#ffffff;margin-left:-10px;margin-right:-10px">
+            <div style="width:200px;text-align: center;color:#ffffff;font-weight:bold;background-color: rgb(148,78,151);height:35px;line-height:35px;border-bottom-left-radius:20px;border-bottom-right-radius:20px;margin:auto">Top 10 Locations</div>
+
+            <div style="height:200px;margin-top:10px;margin-bottom:5px">
+              <ul class="list-group" style="max-height: 200px;overflow-y:scroll;">
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">English</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Art and Design</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Drama</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Music</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Physics</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Chemistry</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Biology</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Home economics</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Physical Education</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Computing Science</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">French</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">German</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Mandarin</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Religious Education</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Modern Studies</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Geography</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">History</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Creative computing</a></li>
+                <li class="list-group-item" style="border:none"><a style="border:1px solid #E6E6E6;background-color:#E6E6E6;color:#000000;font-size:14px;text-decoration:none;border-radius:20px;padding:5px 15px;box-sizing:border-box">Technology</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <div class="col-md-12">
+          <div class="row" style="margin-left:-10px;margin-right:-10px;background-color:#ffffff">
+            <div style="height:30px;background-color:#246DC8;line-height:30px;font-weight:bold;color:#ffffff;padding-left:10px">Audience Report</div>
+            <div class="col-md-3" style="height:200px;margin-top:10px;margin-bottom:5px" id="gender_chart"></div>
+            <div class="col-md-3" style="height:200px;margin-top:10px;margin-bottom:5px" id="age_chart"></div>
+            <div class="col-md-3" style="height:200px;margin-top:10px;margin-bottom:5px" id="income_chart"></div>
+            <div class="col-md-3" style="height:200px;margin-top:10px;margin-bottom:5px" id="device_chart"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:10px;margin-bottom:10px">
+        <div class="col-md-12">
+          <div class="row" style="margin-left:-10px;margin-right:-10px;background-color:#ffffff">
+            <div style="height:30px;background-color:#246DC8;line-height:30px;font-weight:bold;color:#ffffff;padding-left:10px">Campaign Overview</div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="table-responsive" style="height:200px">
+                  <table class="table table-small-font table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th data-priority="1" style="background-color:#787878"></th>
+                        <th data-priority="1" style="background-color:#787878;text-align: center"><a style="font-size:12px;color:#ffffff;text-decoration:none">Campaign Name</a></th>
+                        <th data-priority="3" style="background-color:#787878;text-align: center"><a style="font-size:12px;color:#ffffff;text-decoration:none">Buying Type</a></th>
+                        <th data-priority="3" style="background-color:#787878;text-align: center"><a style="font-size:12px;color:#ffffff;text-decoration:none">Location</a></th>
+                        <th data-priority="3" style="background-color:#787878;text-align: center"><a style="font-size:12px;color:#ffffff;text-decoration:none"a>%KPI</a></th>
+                        <th data-priority="3" style="background-color:#787878;text-align: center"><a style="font-size:12px;color:#ffffff;text-decoration:none"a>Schedule</a></th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">
+                          <label class="switch">
+                            <input type="checkbox">
+                            <div class="slider round"></div>
+                          </label>
+                        </td>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">YoMost CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">7 Coffee Shops, HCM</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">69%</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">Apr 21,2016-Apr 28,2016</td>
+                      </tr>
+
+                      <tr>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">
+                          <label class="switch">
+                            <input type="checkbox">
+                            <div class="slider round"></div>
+                          </label>
+                        </td>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">YoMost CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">7 Coffee Shops, HCM</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">69%</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">Apr 21,2016-Apr 28,2016</td>
+                      </tr>
+
+                      <tr>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">
+                          <label class="switch">
+                            <input type="checkbox">
+                            <div class="slider round"></div>
+                          </label>
+                        </td>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">YoMost CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">7 Coffee Shops, HCM</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">69%</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">Apr 21,2016-Apr 28,2016</td>
+                      </tr>
+
+                      <tr>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">
+                          <label class="switch">
+                            <input type="checkbox">
+                            <div class="slider round"></div>
+                          </label>
+                        </td>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">YoMost CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">7 Coffee Shops, HCM</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">69%</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">Apr 21,2016-Apr 28,2016</td>
+                      </tr>
+
+                      <tr>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">
+                          <label class="switch">
+                            <input type="checkbox">
+                            <div class="slider round"></div>
+                          </label>
+                        </td>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">YoMost CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">7 Coffee Shops, HCM</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">69%</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">Apr 21,2016-Apr 28,2016</td>
+                      </tr>
+
+                      <tr>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">
+                          <label class="switch">
+                            <input type="checkbox">
+                            <div class="slider round"></div>
+                          </label>
+                        </td>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">YoMost CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">7 Coffee Shops, HCM</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">69%</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">Apr 21,2016-Apr 28,2016</td>
+                      </tr>
+
+                      <tr>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">
+                          <label class="switch">
+                            <input type="checkbox">
+                            <div class="slider round"></div>
+                          </label>
+                        </td>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">YoMost CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">7 Coffee Shops, HCM</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">69%</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">Apr 21,2016-Apr 28,2016</td>
+                      </tr>
+
+                      <tr>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">
+                          <label class="switch">
+                            <input type="checkbox">
+                            <div class="slider round"></div>
+                          </label>
+                        </td>
+                        <td data-priority="1" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">YoMost CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">CPC</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">7 Coffee Shops, HCM</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">69%</td>
+                        <td data-priority="3" style="text-align: center;color:#000000;font-weight:bold;background-color:#ffffff;vertical-align: middle">Apr 21,2016-Apr 28,2016</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
