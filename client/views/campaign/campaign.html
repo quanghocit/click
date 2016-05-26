@@ -1,8 +1,12 @@
 <div ng-show="campaign">
-  <div ng-show="divLocation" class="radius-50" style="position: fixed; width: 40%; background-color: #323232; z-index: 2; margin-left: 30%; margin-top: 5%; padding-top: 10px; padding-bottom: 10px;">
+
+  <!--Show Location-->
+  <div ng-show="divLocation" class="radius-50"
+       style="position: fixed; width: 40%; background-color: #323232; z-index: 2; margin-left: 30%; margin-top: 5%; padding-top: 10px; padding-bottom: 10px;">
     <div class="col-xs-12">
       <div class="input-group">
-        <input type="text" class="form-control" style="background: none; color: #ffffff" placeholder="Type in to search..." aria-describedby="basic-addon1">
+        <input type="text" class="form-control" style="background: none; color: #ffffff"
+               placeholder="Type in to search Location..." aria-describedby="basic-addon1">
         <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
       </div>
     </div>
@@ -19,16 +23,23 @@
       <label style="border: none; background: #31B0D5; color: #ffffff; font-weight: normal" class="input_campaign"
              type="text">Highlands Nguyen Du</label>
     </div>
-    <button class="btn radius-50 btn-sm btn-default" style="float: right; margin-right: 20px" ng-click="okLocation()">OK</button>
+    <button class="btn radius-50 btn-sm btn-default" style="float: right; margin-right: 20px" ng-click="okLocation()">
+      OK
+    </button>
   </div>
-  <div class="col-sm-8 col-sm-push-2" style="position:absolute; background-color:rgba(192,192,192,0.5); padding: 0px 0px;
- margin: auto; height: 100%">
+  <!--End Show Location-->
+
+  <div class="col-sm-8 col-sm-push-2 padding0 mainCampaign"
+       style="position:absolute; background-color:rgba(192,192,192,0.5); margin: auto; height: 100%">
     <div class="col-xs-4 text-center" style="background-color:rgba(49,176,213,0.7);
     margin-left: 20px; border-radius: 0px 0px 10px 10px; height: 25px; line-height: 25px; margin-bottom: 5px; color: #ffffff">
       Create Ads
     </div>
+
     <div class="clearfix"></div>
-    <div class="col-sm-4 hidden-xs" style="background-color: #585858; text-align: left; color: #ffffff; height: 450px;">
+
+    <div class="col-md-4 hidden-xs colCampaign"
+         style="background-color: #585858; text-align: left; color: #ffffff; min-height: 450px">
       <div class="clearfix" style="margin: 15px 15px"></div>
       <div class="checkbox">
         <i class="fa fa-check-circle" style="font-size: 20px" id="campaign-icon"></i>
@@ -57,7 +68,7 @@
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-8" style="background-color: #ffffff; height: 450px; margin: 0px 0px;">
+    <div class="col-xs-12 col-md-8 colCampaign" style="background-color: #ffffff; height: 450px; margin: 0px 0px;">
       <!--Campaign-->
       <div class="" id="step1" ng-show="showstep1">
         <ul class="nav h410" style="overflow: auto">
@@ -390,11 +401,11 @@
           <div class="col-xs-12" style="margin: 5px 0px; padding-left: 0px">
             <div class="col-xs-12"><label>Campaign:</label></div>
             <span class="col-xs-6">- Campaign Name: </span>
-            <span class="col-xs-6">X-Men Apr</span>
+            <span class="col-xs-6 text-italic">X-Men Apr</span>
 
             <div class="clearfix"></div>
             <span class="col-xs-6">- Campaign Objective: </span>
-            <span class="col-xs-6">Clicks To Website</span>
+            <span class="col-xs-6 text-italic">Clicks To Website</span>
 
             <div class="clearfix"></div>
             <div class="col-xs-12 padding0" style="margin: 5px 0px; padding-left: 0px">
@@ -402,7 +413,7 @@
 
               <div class="col-xs-12">
                 <span class="col-xs-4 padding0">- Ad Set Name: </span>
-                <span class="col-xs-8">VN 171</span>
+                <span class="col-xs-8 text-italic">VN 171</span>
               </div>
               <div class="clearfix"></div>
               <div class="col-xs-12 padding0">
@@ -413,33 +424,36 @@
 
                   <div class="col-sm-9 padding0">
                     <div class="col-sm-12"
-                         style="overflow: auto; height: 100px; background-color: #B8B8B8; border-radius: 10px 10px">
-                      <label style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
-                             type="text">Hồ
-                        Chí Minh</label>
-                      <label style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
-                             type="text">Coffee
-                        Shops</label>
-                      <label style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
-                             type="text">Starbucks
-                        New World</label>
-                      <label style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
-                             type="text">Starbucks
-                        NKKN</label>
-                      <label style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
-                             type="text">Starbucks
-                        Dong Du</label>
+                         style="padding: 5px 5px; overflow: auto; height: 100px; background-color: #B8B8B8; border-radius: 10px 10px;">
+                      <button style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
+                              type="text">Hồ Chí Minh
+                      </button>
+                      <button style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
+                              type="text">Coffee Shops
+                      </button>
+                      <button style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
+                              type="text">Starbucks New World
+                      </button>
+                      <button style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
+                              type="text">Starbucks NKKN
+                      </button>
+                      <button style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
+                              type="text">Starbucks Dong Du
+                      </button>
                     </div>
                   </div>
                   <div class="clearfix"></div>
                   <div class="col-sm-12  padding0">
-                    <div><span class="col-xs-4 padding0">* Age:</span><span class="col-xs-8 padding0">18-65+</span>
+                    <div><span class="col-xs-4 padding0">* Age:</span><span
+                      class="col-xs-8 padding0 text-italic">18-65+</span>
                     </div>
-                    <div><span class="col-xs-4 padding0">* Gender:</span><span class="col-xs-8 padding0">All</span>
+                    <div><span class="col-xs-4 padding0">* Gender:</span><span
+                      class="col-xs-8 padding0 text-italic">All</span>
                     </div>
                     <div><span class="col-xs-4 padding0">* KPI:</span><span
-                      class="col-xs-8 padding0">1,000 Clicks</span></div>
-                    <div><span class="col-xs-4 padding0">* Schedule:</span><span class="col-xs-8 padding0">April 21, 2016 - April 28, 2016</span>
+                      class="col-xs-8 padding0 text-italic">1,000 Clicks</span></div>
+                    <div><span class="col-xs-4 padding0">* Schedule:</span>
+                      <span class="col-xs-8 padding0 text-italic">April 21, 2016 - April 28, 2016</span>
                     </div>
                   </div>
                   <div class="clearfix"></div>
@@ -452,11 +466,11 @@
             <div class="col-xs-12"><label>Ad:</label></div>
             <div class="col-xs-12 padding0">
               <span class="col-xs-4">- Ad Name: </span>
-              <span class="col-xs-8 padding0">X-Men Apr</span>
+              <span class="col-xs-8 padding0 text-italic">X-Men Apr</span>
             </div>
             <div class="col-xs-12 padding0">
               <span class="col-xs-4">- Landing page: </span>
-              <span style="text-decoration: underline" class="col-sm-8 padding0">www.xmen.com.vn</span>
+              <span style="text-decoration: underline" class="col-sm-8 padding0 text-italic">www.xmen.com.vn</span>
             </div>
           </div>
         </div>

@@ -166,4 +166,6 @@ angular
     $scope.agesfrom = $scope.ages[17];
     $scope.agesto = $scope.ages[22];
 
+    var colHeight = $('.mainCampaign').height();
+    $('.colCampaign').css('height',colHeight - 50);
   }]);

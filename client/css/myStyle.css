@@ -1,7 +1,26 @@
 body,html{}
-.h410::-webkit-scrollbar-thumb{
-  background-color:#B03C3F;
+/*Scrollbar*/
+::-webkit-scrollbar{
+  width: 5px;
+  height:5px;
+}
+::-webkit-scrollbar-button {
+  width: 5px;
+  height:5px;
+}
+::-webkit-scrollbar-track {
+  background:#eee;
+  border: thin solid lightgray;
+  box-shadow: 0px 0px 3px #dfdfdf inset;
   border-radius:10px;
+}
+::-webkit-scrollbar-thumb {
+  background:#999;
+  border: thin solid gray;
+  border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background:#7d7d7d;
 }
 .step1-ot{
   min-height: 55px;
@@ -27,7 +46,9 @@ input[type=radio]:checked ~ .step1-ot::before{
 .colorA5{
   color: #A5A5A5;
 }
-
+.text-italic{
+  font-style: italic;
+}
 .left{
   float: left;
   margin-left: 10px;
@@ -50,7 +71,9 @@ input[type=radio]:checked ~ .step1-ot::before{
   border:none;
   outline: none;
 }
-
+.h250{
+  min-height: 250px;
+}
 .titlestep3{
   height: 30px;
   line-height: 30px;
@@ -72,7 +95,12 @@ input[type=radio]:checked ~ .step1-ot::before{
 .padding0{
   padding: 0px 0px;
 }
-
+#myselection select option{
+  background-color: #ffffff; color: #333333;
+  border-radius: 10px 10px;
+  padding: 5px 5px;
+  margin: 5px 5px;
+}
 .cusInput{
   width: 100%;
   background-color: #EBEBEB;
