@@ -9,6 +9,7 @@ angular
 
     $scope.campaign = true;
     $scope.step3_2 = false;
+    $scope.divLocation = false;
 
     //step1
     $scope.showstep1 = true;
@@ -52,6 +53,14 @@ angular
           break;
       }
       ;
+    };
+
+    $scope.modalClick = function () {
+      $scope.divLocation = true;
+    };
+
+    $scope.okLocation = function () {
+      $scope.divLocation = false;
     };
 
     $scope.next1_2 = function () {

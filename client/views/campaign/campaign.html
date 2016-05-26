@@ -1,6 +1,28 @@
 <div ng-show="campaign">
-  <div class="col-sm-8 col-sm-push-2" style="background-color:rgba(192,192,192,0.5); padding: 0px 0px;
- margin: auto; margin-top: 30px;">
+  <div ng-show="divLocation" class="radius-50" style="position: fixed; width: 40%; background-color: #323232; z-index: 2; margin-left: 30%; margin-top: 5%; padding-top: 10px; padding-bottom: 10px;">
+    <div class="col-xs-12">
+      <div class="input-group">
+        <input type="text" class="form-control" style="background: none; color: #ffffff" placeholder="Type in to search..." aria-describedby="basic-addon1">
+        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
+      </div>
+    </div>
+    <div class="col-xs-12 radius-50" style="height: 120px; overflow-y: auto;">
+      <label style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
+             type="text">Starbucks New World</label>
+      <label style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
+             type="text">Highlands Nguyen Du</label>
+    </div>
+    <div class="col-xs-12 radius-50" style="height: 120px; overflow-y: auto; background-color: #4C4C4C">
+      <p style="color: #ffffff">Selected</p>
+      <label style="border: none; background: #31B0D5; color: #ffffff; font-weight: normal" class="input_campaign"
+             type="text">Starbucks New World</label>
+      <label style="border: none; background: #31B0D5; color: #ffffff; font-weight: normal" class="input_campaign"
+             type="text">Highlands Nguyen Du</label>
+    </div>
+    <button class="btn radius-50 btn-sm btn-default" style="float: right; margin-right: 20px" ng-click="okLocation()">OK</button>
+  </div>
+  <div class="col-sm-8 col-sm-push-2" style="position:absolute; background-color:rgba(192,192,192,0.5); padding: 0px 0px;
+ margin: auto; height: 100%">
     <div class="col-xs-4 text-center" style="background-color:rgba(49,176,213,0.7);
     margin-left: 20px; border-radius: 0px 0px 10px 10px; height: 25px; line-height: 25px; margin-bottom: 5px; color: #ffffff">
       Create Ads
@@ -224,7 +246,7 @@
           <div class="margin_create_ads">
             <div class="col-xs-3 padding0"><span>- Location:</span></div>
             <div class="col-xs-9 padding0">
-              <button class="select_location_create_ads">Click to select</button>
+              <button class="select_location_create_ads" ng-click="modalClick()">Click to select</button>
             </div>
           </div>
           <div class="clearfix" style="margin-bottom: 5px"></div>
