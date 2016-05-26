@@ -135,7 +135,7 @@ angular
 
     //Grid
     var colHeight = $('.mainReport').height();
-    $("#grid").css('height',colHeight - $('.h250').height() - 100);
+    $("#grid").css('height',colHeight - $('.h250').height() - 90);
     $('.colReport').css('height',colHeight - 50);
     var columnDefs = [
       {field: "campaign", headerName: "Campaign Overall", width: 150},

@@ -8,8 +8,7 @@ angular
     $('.campaign').removeClass("hidden");
 
     $scope.campaign = true;
-    $scope.step3_2 = false;
-    $scope.divLocation = false;
+
 
     //step1
     $scope.showstep1 = true;
@@ -55,10 +54,11 @@ angular
       ;
     };
 
+    $scope.step3_2 = false;
+    $scope.divLocation = false;
     $scope.modalClick = function () {
       $scope.divLocation = true;
     };
-
     $scope.okLocation = function () {
       $scope.divLocation = false;
     };
@@ -140,7 +140,7 @@ angular
       $scope.step3 = false;
     };
 
-    $scope.editbook = function() {
+    $scope.editbook = function () {
       $scope.show3 = true;
       $scope.show31 = false;
       $scope.preview = false;
@@ -156,16 +156,18 @@ angular
     }
 
     $scope.ages = [];
-    for (var i=0; i<45; i++){
-      $scope.ages.push({id:i+1,label:i+1});
-    };
+    for (var i = 0; i < 45; i++) {
+      $scope.ages.push({id: i + 1, label: i + 1});
+    }
+    ;
     $scope.times = [];
-    for (var i=0; i<24; i++){
-      $scope.times.push({id:i+1,label:i+1+':00'});
-    };
+    for (var i = 0; i < 24; i++) {
+      $scope.times.push({id: i + 1, label: i + 1 + ':00'});
+    }
+    ;
     $scope.agesfrom = $scope.ages[17];
     $scope.agesto = $scope.ages[22];
 
     var colHeight = $('.mainCampaign').height();
-    $('.colCampaign').css('height',colHeight - 50);
+    $('.colCampaign').css('height', colHeight - 50);
   }]);
