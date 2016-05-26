@@ -20,6 +20,8 @@
     "moment": "^2.13.0",
     "jquery-ui": "^1.11.4",
     "eonasdan-bootstrap-datetimepicker": "^4.17.37",
-    "bootstrap-daterangepicker": "^2.1.19"
+    "bootstrap-daterangepicker": "^2.1.19",
+    "simpleWeather": "^3.1.0",
+    "RWD-Table-Patterns": "^5.0.4"
   }
 }

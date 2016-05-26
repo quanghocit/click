@@ -4,6 +4,9 @@
 angular
   .module('app')
   .controller('Hotspots', ['$scope', '$rootScope', function($scope, $rootScope) {
+    $('.none').addClass("hidden");
+    $('.hosspots').removeClass("hidden");
+
     var chartColors = {
       'chart.general': ['#578ED2', '#D25696', '#FDBB47', '#87C07E', '#964C97'],
       'default': ['#4572A7', '#AA4643', '#89A54E', '#80699B', '#3D96AE', '#DB843D', '#92A8CD', '#A47D7C', '#B5CA92']

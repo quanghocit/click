@@ -5,6 +5,8 @@ angular
   .module('app')
   .controller('Location',
     ['$scope', 'Tracking', function ($scope, Tracking) {
+      $('.none').addClass("hidden");
+      $('.location').removeClass("hidden");
       $(document).ready(function() {
         getweather_HCM();
         getweather_HN();
