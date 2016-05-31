@@ -2,26 +2,25 @@
 
   <!--Show Location-->
   <div ng-show="divLocation" class="radius-50"
-       style="position: fixed; width: 40%; background-color: #323232; z-index: 2; margin-left: 30%; margin-top: 5%; padding-top: 10px; padding-bottom: 10px;">
+       style="position: fixed; width: 40%; background-color: #323232; z-index: 99; margin-left: 30%; margin-top: 5%; padding-top: 10px; padding-bottom: 10px;">
     <div class="col-xs-12">
       <div class="input-group">
         <input type="text" class="form-control" style="background: none; color: #ffffff"
-               placeholder="Type in to search Location..." aria-describedby="basic-addon1">
+               placeholder="Type in to search Location..." aria-describedby="basic-addon1" ng-model="searchLocation"
+               ng-change="changeSearch()">
         <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
       </div>
     </div>
     <div class="col-xs-12 radius-50" style="height: 120px; overflow-y: auto;">
-      <label style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
-             type="text">Starbucks New World</label>
-      <label style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
-             type="text">Highlands Nguyen Du</label>
+      <button style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
+              type="text" ng-repeat="loc in locaOfCity track by $index" ng-click="selectItem(loc)">{{loc}}
+      </button>
     </div>
     <div class="col-xs-12 radius-50" style="height: 120px; overflow-y: auto; background-color: #4C4C4C">
       <p style="color: #ffffff">Selected</p>
-      <label style="border: none; background: #31B0D5; color: #ffffff; font-weight: normal" class="input_campaign"
-             type="text">Starbucks New World</label>
-      <label style="border: none; background: #31B0D5; color: #ffffff; font-weight: normal" class="input_campaign"
-             type="text">Highlands Nguyen Du</label>
+      <button style="border: none; background: #2985D0; color: #ffffff; font-weight: normal" class="input_campaign"
+              type="text" ng-repeat="uloc in ulocaOfCity track by $index" ng-click="unselectItem(uloc)">{{uloc}}
+      </button>
     </div>
     <button class="btn radius-50 btn-sm btn-default" style="float: right; margin-right: 20px" ng-click="okLocation()">
       OK
@@ -68,43 +67,43 @@
       </div>
     </div>
 
-    <div class="col-xs-12 col-md-8 colCampaign" style="background-color: #ffffff; height: 450px; margin: 0px 0px;">
+    <div class="col-xs-12 col-md-8 colCampaign" style="background-color: #ffffff; min-height: 450px; margin: 0px 0px;">
       <!--Campaign-->
       <div class="" id="step1" ng-show="showstep1">
         <ul class="nav h410" style="overflow: auto">
           <li class="">
-            <input type="radio" name="checkradio" id="op1" style="display: none" ng-model="option.step1"
-                   value="option1">
+            <input type="radio" name="checkradio" id="op1" style="display: none" ng-model="optionStep1"
+                   value="option1" checked="checked">
             <label for="op1" class="step1-ot"><i class="fa fa-globe fa-lg"></i> &nbsp; &nbsp; &nbsp;Send people to
               website</label>
           </li>
           <li class="">
-            <input type="radio" name="checkradio" id="op2" style="display: none" ng-model="option.step1"
+            <input type="radio" name="checkradio" id="op2" style="display: none" ng-model="optionStep1"
                    value="option2">
             <label for="op2" class="step1-ot"><i class="fa fa-play-circle-o fa-lg"></i> &nbsp; &nbsp; &nbsp;Get video
               views</label>
           </li>
           <li class="">
-            <input type="radio" name="checkradio" id="op3" style="display: none" ng-model="option.step1"
+            <input type="radio" name="checkradio" id="op3" style="display: none" ng-model="optionStep1"
                    value="option3">
             <label for="op3" class="step1-ot"><i class="fa fa-heartbeat fa-lg"></i> &nbsp; &nbsp; &nbsp;Get
               engagement</label>
           </li>
           <li class="">
-            <input type="radio" name="checkradio" id="op4" style="display: none" ng-model="option.step1"
+            <input type="radio" name="checkradio" id="op4" style="display: none" ng-model="optionStep1"
                    value="option4">
             <label for="op4" class="step1-ot"><i class="fa fa-group fa-lg"></i> &nbsp; &nbsp; &nbsp;Raise attendance at
               your event</label>
           </li>
           <li class="">
-            <input type="radio" name="checkradio" id="op5" style="display: none" ng-model="option.step1"
+            <input type="radio" name="checkradio" id="op5" style="display: none" ng-model="optionStep1"
                    value="option5">
             <label for="op5" class="step1-ot"><i class="fa fa-retweet fa-lg"></i> &nbsp; &nbsp; &nbsp;Get people to
               claim
               your offer</label>
           </li>
           <li class="">
-            <input type="radio" name="checkradio" id="op6" style="display: none" ng-model="option.step1"
+            <input type="radio" name="checkradio" id="op6" style="display: none" ng-model="optionStep1"
                    value="option6">
             <label for="op6" class="step1-ot"><i class="fa fa-file-text-o fa-lg"></i> &nbsp; &nbsp; &nbsp;Collect leads
               for your business</label>
@@ -197,14 +196,15 @@
             <div class="col-xs-9 padding0">
               <ul class="nav">
                 <li style="float: left">
-                  <input type="radio" name="gender" id="all_gender" checked style="display: none"/>
+                  <input type="radio" name="gender" ng-model="gender" value="All" id="all_gender" checked
+                         style="display: none"/>
                   <label class="label_radio_gender" style="" for="all_gender">All</label>
                 </li>
                 <li style="float: left">
-                  <input type="radio" name="gender" id="men" style="display: none"/>
+                  <input type="radio" name="gender" ng-model="gender" value="Men" id="men" style="display: none"/>
                   <label class="label_radio_gender" style="" for="men">Men</label></li>
                 <li style="float: left">
-                  <input type="radio" name="gender" id="women" style="display: none"/>
+                  <input type="radio" name="gender" ng-model="gender" value="Women" id="women" style="display: none"/>
                   <label class="label_radio_gender" style="" for="women">Women</label>
                 </li>
               </ul>
@@ -239,16 +239,18 @@
           <div class="titlestep3">Location</div>
           <div class="margin_create_ads">
             <div class="col-xs-3 padding0"><span>- City:</span></div>
-            <div class="col-xs-9 padding0">
-              <select class="select_location_create_ads">
+            <div class="col-xs-6 padding0">
+              <select class="form-control cusInput" ng-model="modelLocation" ng-change="city()">
+                <option ng-repeat="location in locations.slice().reverse()" value="{{location.id}}">{{location.city}}
+                </option>
               </select>
             </div>
           </div>
           <div class="clearfix"></div>
           <div class="margin_create_ads">
             <div class="col-xs-3 padding0"><span>- Category:</span></div>
-            <div class="col-xs-9 padding0">
-              <select class="select_location_create_ads">
+            <div class="col-xs-6 padding0">
+              <select class="form-control cusInput">
                 <option></option>
               </select>
             </div>
@@ -256,8 +258,10 @@
           <div class="clearfix"></div>
           <div class="margin_create_ads">
             <div class="col-xs-3 padding0"><span>- Location:</span></div>
-            <div class="col-xs-9 padding0">
-              <button class="select_location_create_ads" ng-click="modalClick()">Click to select</button>
+            <div class="col-xs-6 padding0">
+              <button class="form-control cusInput" ng-click="modalClick()">Click to select</button>
+              <!--<div ng-dropdown-multiselect="" options="example9data" selected-model="example9model"-->
+              <!--extra-settings="example9settings" events="myEvents"></div>-->
             </div>
           </div>
           <div class="clearfix" style="margin-bottom: 5px"></div>
@@ -266,11 +270,11 @@
           <div class="margin_create_ads">
             <div class="col-xs-3 padding0"><span>- KPI:</span></div>
             <div class="col-xs-5 padding0">
-              <input class="cusInput" style="padding-left: 10px" type="number" value="1000">
+              <input class="form-control cusInput" type="number" ng-model="valueKPI">
             </div>
             <div class="col-xs-4">
-              <select id="select_category_from" class="select_location_create_ads">
-                <option>Clicks</option>
+              <select id="select_category_from" class="form-control cusInput" ng-model="optionKPI">
+                <option value="Clicks">Clicks</option>
               </select>
             </div>
           </div>
@@ -280,38 +284,40 @@
             <div class="col-sm-9 padding0">
               <span class="col-xs-2 padding0"> Start </span>
 
-              <div class="co-xs-4 padding0">
-                <div class='input-group date' id='datetimepicker6'>
-                  <input style="width:40%; float: left; border-radius: 15px 0px 0px 15px;border: none" type='text'
-                         class="input_create_ads"/>
-              <span
-                style="float: left; padding: 5px 27px 5px 0px;background-color: #EBEBEB;border-radius: 0px 15px 15px 0px"
-                class="input-group-addon">
-                <span style="padding: 0px 5px" class="glyphicon glyphicon-calendar"></span>
-              </span>
-                  <span style="margin: 0px 7px 0px 7px; float: left; padding: 3.5px 0px">Time</span>
-                  <select style="width:30%;float: left;" class="select_create_ads"
-                          ng-options="time as time.label for time in times track by time.id" ng-model="timeto"></select>
+              <div class="col-xs-6 padding0">
+                <div class="form-group">
+                  <div class='input-group date' id='datetimepicker6'>
+                    <input type='text' class="form-control cusInput" ng-model="dateStart" ng-value="startDay"/>
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                  </div>
                 </div>
               </div>
+              <div class="col-xs-4">
+                <select style="" class="form-control cusInput"
+                        ng-options="time as time.label for time in times track by time.id" ng-model="timeFrom">
+                  <option value="">Time</option>
+                </select>
+              </div>
               <div class="clear"></div>
-
               <span class="col-xs-2 padding0"> End </span>
 
-              <div class="co-xs-4 padding0">
-                <div class='input-group date' id='datetimepicker7'>
-                  <input style="width:40%; float: left; border-radius: 15px 0px 0px 15px;border: none" type='text'
-                         class="input_create_ads"/>
-              <span
-                style="float: left; padding: 5px 27px 5px 0px;background-color: #EBEBEB;border-radius: 0px 15px 15px 0px"
-                class="input-group-addon">
-                <span style="padding: 0px 5px" class="glyphicon glyphicon-calendar"></span>
-              </span>
-                  <span style="margin: 0px 7px 0px 7px; float: left; padding: 3.5px 0px">Time</span>
-                  <select style="width:30%;float: left;" class="select_create_ads"
-                          ng-options="time as time.label for time in times track by time.id"
-                          ng-model="timefrom"></select>
+              <div class="col-xs-6 padding0">
+                <div class="form-group">
+                  <div class='input-group date' id='datetimepicker7'>
+                    <input type='text' class="form-control cusInput" ng-model="dateStart"/>
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                  </div>
                 </div>
+              </div>
+              <div class="col-xs-4">
+                <select style="" class="form-control cusInput"
+                        ng-options="time as time.label for time in times track by time.id" ng-model="timeTo">
+                  <option value="">Time</option>
+                </select>
               </div>
             </div>
           </div>
@@ -321,8 +327,8 @@
           <div class="titlestep3">Ad Set</div>
           <div class="margin_create_ads">
             <div class="col-xs-3 padding0"><span>- Name:</span></div>
-            <div class="col-xs-9 padding0">
-              <select id="select_city_from" class="select_location_create_ads">
+            <div class="col-xs-6 padding0">
+              <select id="select_city_from" class="form-control cusInput">
                 <option>Brand_Apr_Name_01</option>
               </select>
             </div>
@@ -384,15 +390,15 @@
             </div>
             <div class="col-xs-12 margin5">
               <div class="col-xs-4">- Mobile</div>
-              <div class="col-xs-8"><input type="text" class="cusInput"></div>
+              <div class="col-xs-8"><input type="text" class="form-control cusInput"></div>
             </div>
             <div class="col-xs-12 margin5">
               <div class="col-xs-4">- Desktop</div>
-              <div class="col-xs-8"><input type="text" class="cusInput"></div>
+              <div class="col-xs-8"><input type="text" class="form-control cusInput"></div>
             </div>
             <div class="col-xs-12 margin5">
               <div class="col-xs-4">- Landing page</div>
-              <div class="col-xs-8"><input type="text" class="cusInput"></div>
+              <div class="col-xs-8"><input type="text" class="form-control cusInput"></div>
             </div>
           </div>
         </div>
@@ -408,6 +414,7 @@
             <span class="col-xs-6 text-italic">Clicks To Website</span>
 
             <div class="clearfix"></div>
+            <hr/>
             <div class="col-xs-12 padding0" style="margin: 5px 0px; padding-left: 0px">
               <label class="col-xs-12">Ad Set:</label>
 
@@ -445,15 +452,15 @@
                   <div class="clearfix"></div>
                   <div class="col-sm-12  padding0">
                     <div><span class="col-xs-4 padding0">* Age:</span><span
-                      class="col-xs-8 padding0 text-italic">18-65+</span>
+                      class="col-xs-8 padding0 text-italic">{{agesfrom.label}} - {{agesto.label}}</span>
                     </div>
                     <div><span class="col-xs-4 padding0">* Gender:</span><span
-                      class="col-xs-8 padding0 text-italic">All</span>
+                      class="col-xs-8 padding0 text-italic">{{gender}}</span>
                     </div>
                     <div><span class="col-xs-4 padding0">* KPI:</span><span
-                      class="col-xs-8 padding0 text-italic">1,000 Clicks</span></div>
+                      class="col-xs-8 padding0 text-italic">{{valueKPI}} {{optionKPI}}</span></div>
                     <div><span class="col-xs-4 padding0">* Schedule:</span>
-                      <span class="col-xs-8 padding0 text-italic">April 21, 2016 - April 28, 2016</span>
+                      <span class="col-xs-8 padding0 text-italic">{{dateStart}} - {{dateEnd}}</span>
                     </div>
                   </div>
                   <div class="clearfix"></div>
@@ -462,6 +469,7 @@
             </div>
           </div>
           <div class="clearfix"></div>
+          <hr/>
           <div class="col-xs-12 padding0">
             <div class="col-xs-12"><label>Ad:</label></div>
             <div class="col-xs-12 padding0">
@@ -498,21 +506,3 @@
 <div class="col-xs-10 col-xs-push-1 col-sm-4 col-sm-push-4 processing" ng-show="step3_2">
   <p>{{actionprocess}}</p>
 </div>
-
-<script type="text/javascript">
-  $(function () {
-    $('#datetimepicker6').datetimepicker({
-      format: 'MMM - DD, YYYY'
-    });
-    $('#datetimepicker7').datetimepicker({
-      useCurrent: false,
-      format: 'MMM - DD, YYYY'
-    });
-    $("#datetimepicker6").on("dp.change", function (e) {
-      $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-    });
-    $("#datetimepicker7").on("dp.change", function (e) {
-      $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-    });
-  });
-</script>

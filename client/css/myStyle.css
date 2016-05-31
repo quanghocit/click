@@ -102,16 +102,14 @@ input[type=radio]:checked ~ .step1-ot::before{
   margin: 5px 5px;
 }
 .cusInput{
-  width: 100%;
   background-color: #EBEBEB;
   color: #333333;
   border: none;
-  border-radius: 10px 10px;
+  height: 30px;
 }
 
 .cusInput:focus {
   outline: none;
-  border-radius: 10px 10px;
   border: solid 1px #66afe9;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
@@ -159,28 +157,17 @@ input[type=radio]:checked ~ .step1-ot::before{
 }
 .select_create_ads{
   background-color: #EBEBEB;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 5px 5px;
   padding: 3.5px 3px 3.5px 10px;
   border: solid 0px;
   outline: none;
-}
-.select_location_create_ads{
-  background-color: #EBEBEB;
-  border-radius:15px 15px 15px 15px;
-  padding: 3.5px 30px 3.5px 15px;
-  border: solid 0px;
-  margin-left: 3px;
-  outline: none;
-}
-.select_location_create_ads:hover{
-  background-color: #CDCDCD;
 }
 .margin_create_ads{
   margin: 10px 10px;
 }
 .label_radio_gender{
   background-color: #EBEBEB;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 5px 5px;
   padding: 2px 15px;
   margin-left: 3px;
   font-weight: normal;;

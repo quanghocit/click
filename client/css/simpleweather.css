@@ -1,0 +1,91 @@
+.icon-4 {background:url('../images/thundershowers_day_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-11 {background:url('../images/rain_day_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-12 {background:url('../images/rain_day_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-13 {background:url('../images/bowling_snow.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-14 {background:url('../images/bowling_snow.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-15 {background:url('../images/bowling_snow.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-16 {background:url('../images/snow.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-18 {background:url('../images/bowling_snow.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-24 {background:url('../images/windy_day_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-25 {background:url('../images/cold.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-26 {background:url('../images/cloudy_day_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-27 {background:url('../images/mostly_cloudy_day_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-28 {background:url('../images/mostly_cloudy_day_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-29 {background:url('../images/partly_cloudy_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-30 {background:url('../images/partly_cloudy_day.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-31 {background:url('../images/clear_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-32 {background:url('../images/clear_day.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-33 {background:url('../images/fair_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-34 {background:url('../images/fair_day.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-36 {background:url('../images/clear_day.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-37 {background:url('../images/thundershowers_day_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-38 {background:url('../images/scattered_showers_day_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-39 {background:url('../images/scattered_showers_day_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-40 {background:url('../images/rain_day_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-41 {background:url('../images/heavy_snow.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-42 {background:url('../images/scattered_snow_showers.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-43 {background:url('../images/heavy_snow.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-44 {background:url('../images/partly_cloudy_day.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-45 {background:url('../images/thundershowers_day_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-46 {background:url('../images/heavy_snow.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-47 {background:url('../images/scattered_showers_day_night.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+.icon-3200 {background:url('../images/nan.png') no-repeat center center;width:100%;height:100%;background-size:30px 30px;margin:auto;border-image:none}
+
+/*checkob on/off*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #49CB45;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #49CB45;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(35px);
+  -ms-transform: translateX(35px);
+  transform: translateX(35px);
+  transform: translateX(35px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 25px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
