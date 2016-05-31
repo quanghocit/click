@@ -20,7 +20,7 @@ angular
         setInterval(getweather_NT,600000);
         setInterval(getweather_CT,600000);
 
-        $("#map_view").height(window.innerHeight);
+        $('#map-view').css("height", $('#area2').height()-30);
       });
 
       function getweather_HCM() {
@@ -124,17 +124,117 @@ angular
 
       //////////////////////////////////////////////////Maps////////////////////////////////////////////////////////////
       //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      var map = L.map('map').setView([14.7828, 106.677], 6);
+      L.mapbox.accessToken = 'pk.eyJ1Ijoibmd1eWVuYW5odnUiLCJhIjoiY2lvdGhreDR4MDBiNXR6bTVtNzY5YzA4NyJ9.D4dhAUjiEp9bdVovym4teg';
+      var map = L.map('map', {
+        minZoom: 5,
+        maxZoom: 18
+      });
 
-      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      L.tileLayer('https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
       }).addTo(map);
 
-      L.marker([14.7828, 106.677]).addTo(map)
-        .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-        .openPopup();
+      var customIcon = L.icon({
+        iconUrl: '../images/Wifi-2-icon.png',
+        iconSize: [32, 32],
+      });
+
+      $('a[href="http://leafletjs.com"]').remove();
+
+      map.setView([16.053200, 108.202840], 5);
+
+      var markers = [
+        {
+          "name":"Tan Son Nhat Airport",
+          "city":"Ho Chi Minh",
+          "lat":10.818463,
+          "lng":106.658825,
+          "tz":"Pacific/Ho Chi Minh City"
+        },{
+          "name":"Hinh Nhu La Coffee",
+          "city":"Ho Chi Minh",
+          "lat":10.773088,
+          "lng":106.683769,
+          "tz":"Pacific/Ho Chi Minh City"
+        },{
+          "name":"Sai Gon Railway",
+          "city":"Ho Chi Minh",
+          "lat":10.782440,
+          "lng":106.677175,
+          "tz":"America/Ho Chi Minh City"
+        },{
+          "name":"Dai Hoc Kinh Te TP.HCM",
+          "city":"Ho Chi Minh",
+          "lat":10.757456,
+          "lng":106.635468,
+          "tz":"America/Ho Chi Minh City"
+        },{
+          "name":"Dai Hoc Cong Nghiep TP.HCM",
+          "city":"Ho Chi Minh",
+          "lat":10.757709,
+          "lng":106.652977,
+          "tz":"America/Ho Chi Minh City"
+        },{
+          "name":"Dai Hoc Cong Nghiep TP.HCM",
+          "city":"Ho Chi Minh",
+          "lat":10.761545,
+          "lng":106.626713,
+          "tz":"America/Ho Chi Minh City"
+        },{
+          "name":"Dai Hoc Cong Nghiep TP.HCM",
+          "city":"Ho Chi Minh",
+          "lat":10.754800,
+          "lng":106.630275,
+          "tz":"America/Ho Chi Minh City"
+        },{
+          "name":"Dai Hoc Cong Nghiep TP.HCM",
+          "city":"Ho Chi Minh",
+          "lat":10.390355,
+          "lng":107.097902,
+          "tz":"America/Ho Chi Minh City"
+        },{
+          "name":"Dai Hoc Cong Nghiep TP.HCM",
+          "city":"Ho Chi Minh",
+          "lat":10.409097,
+          "lng":107.135668,
+          "tz":"America/Ho Chi Minh City"
+        },{
+          "name":"Dai Hoc Cong Nghiep TP.HCM",
+          "city":"Ho Chi Minh",
+          "lat":10.997437,
+          "lng":106.649094,
+          "tz":"America/Ho Chi Minh City"
+        },{
+          "name":"Da Nang Airport",
+          "city":"Da Nang",
+          "lat":16.053200,
+          "lng":108.202840,
+          "tz":"America/Da Nang City"
+        },{
+          "name":"Da Nang Railway",
+          "city":"Da Nang",
+          "lat":16.071582,
+          "lng":108.209343,
+          "tz":"America/Da Nang City"
+        }
+      ];
+
+      var markerClusters = L.markerClusterGroup({maxClusterRadius: 30});
+
+      for(var i=0;i<markers.length;i++)
+      {
+        var content = '<span style="font-size: 14px; color: darkred">' + markers[i].name + '</span><br><span style="font-weight: bold; font-size: 13px; color: #0072c6">'
+          + markers[i].city
+          + '</span><br><span style="font-size: 13px; font-style: italic; color: #1a1a1a">'
+          + markers[i].tz + '</span>';
+
+        var m = L.marker([markers[i].lat, markers[i].lng], {icon: customIcon}).bindPopup(content);
+
+        markerClusters.addLayer(m);
+      }
+
+      map.addLayer(markerClusters);
 
       $scope.showMapAll = function () {
-        map.setView([14.7828, 106.677], 6);
+        map.setView([16.053200, 108.202840], 5);
       };
   }]);

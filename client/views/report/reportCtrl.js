@@ -8,6 +8,7 @@ angular
     $('.report').removeClass("hidden");
 
     $('#perfo').css('font-weight', 'bold');
+    $('#perfo i').css('color','#F0AD4E');
     $scope.showPerformance = true;
     $scope.showPlacement = false;
 
