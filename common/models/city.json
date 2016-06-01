@@ -1,0 +1,21 @@
+{
+  "name": "city",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "categoryId": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -35,5 +35,17 @@
   "tracking": {
     "dataSource": "mysqlDs",
     "public": true
+  },
+  "location": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "city": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "category": {
+    "dataSource": "mysqlDs",
+    "public": true
   }
 }

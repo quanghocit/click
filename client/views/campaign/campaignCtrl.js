@@ -3,12 +3,13 @@
  */
 angular
   .module('app')
-  .controller('Campaign', ['$scope', 'Tracking', function ($scope, Tracking) {
+  .controller('Campaign', ['$scope', 'City', 'Category', 'Location', function ($scope, City, Category, Location) {
     $('.none').addClass("hidden");
     $('.campaign').removeClass("hidden");
 
     $scope.campaign = true;
-
+    $scope.valueKPI = 1000;
+    $scope.optionKPI = "Clicks";
 
     //step1
     $scope.showstep1 = true;
@@ -27,11 +28,10 @@ angular
     $scope.showstep1_5 = false;
     $scope.showstep1_6 = false;
 
-
     $scope.next1_1 = function () {
       $scope.showstep1 = false;
       $scope.next12 = true;
-      switch ($scope.option.step1) {
+      switch ($scope.optionStep1) {
         case "option1":
           $scope.showstep1_1 = true;
           break;
@@ -56,6 +56,8 @@ angular
 
     $scope.step3_2 = false;
     $scope.divLocation = false;
+    $scope.gender = "All";
+    $scope.optionStep1 = "option1";
     $scope.modalClick = function () {
       $scope.divLocation = true;
     };
@@ -102,7 +104,7 @@ angular
       $scope.next21 = false;
       $scope.step2 = false;
       $scope.next12 = true;
-      switch ($scope.option.step1) {
+      switch ($scope.optionStep1) {
         case "option1":
           $scope.showstep1_1 = true;
           break;
@@ -170,4 +172,55 @@ angular
 
     var colHeight = $('.mainCampaign').height();
     $('.colCampaign').css('height', colHeight - 50);
+
+    $scope.citys = City.find();
+    console.log($scope.citys);
+    $scope.cityChange = function () {
+      $scope.categories = [];
+      City.findById({
+        id: $scope.modelCity
+      }).$promise
+        .then(function (data) {
+          $scope.save = JSON.parse(data.categoryId).data;
+          $scope.save.forEach(function (data) {
+            Category.findById({
+              id: data
+            }).$promise
+              .then(function (data) {
+                $scope.categories.push({id:data.id, category: data.category});
+              })
+          });
+        });
+    };
+
+    $scope.categoryChange = function () {
+      console.log($scope.modelCategory);
+    };
+
+    $scope.modalClick = function (){
+
+    };
+    $scope.ulocaOfCity = [];
+
+    $scope.selectItem = function (loc) {
+      console.log("Remove" + loc);
+      $scope.locaOfCity.splice($scope.locaOfCity.indexOf(loc), 1);
+      $scope.ulocaOfCity.push(loc);
+    };
+    $scope.unselectItem = function (uloc) {
+      console.log("Remove" + uloc);
+      $scope.ulocaOfCity.splice($scope.ulocaOfCity.indexOf(uloc), 1);
+      $scope.locaOfCity.push(uloc);
+    };
+    //$scope.changeSearch = function () {
+    //  console.log($scope.locaOfCity);
+    //  console.log($scope.searchLocation);
+    //
+    //  var result = _.filter($scope.locaOfCity, function(key) {
+    //    return key.startsWith($scope.searchLocation);
+    //  })
+    //
+    //  console.log(result);
+    //};
+
   }]);

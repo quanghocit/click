@@ -1,0 +1,28 @@
+{
+  "name": "location",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "categoryId": {
+      "type": "number",
+      "required": true,
+      "default": ""
+    },
+    "cityId": {
+      "type": "number",
+      "required": true,
+      "default": ""
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

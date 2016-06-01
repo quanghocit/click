@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "Click Media",
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
@@ -29,5 +29,5 @@
     "url": ""
   },
   "license": "UNLICENSED",
-  "description": "hello-world"
+  "description": "Click Media"
 }
