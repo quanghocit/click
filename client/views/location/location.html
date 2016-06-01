@@ -1,14 +1,17 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-4 col-sm-12 hidden-xs">
-      <div class="row" id="map_view">
-        <div style="margin-right: 10px; margin-top: 10px; border-radius: 3px; box-shadow: 4px 4px 5px gray; z-index: 9999; position: absolute; width: 180px; height: 30px; background-color: white; text-align:center;right: 0px;border: 1px solid #c0c0c0;">
-          <button ng-click="showMapAll()" style="color: #0072c6; width: 90px; height: 30px; background-color: transparent; border: 0px;outline: none">Overview</button>
+      <div class="row">
+        <div class="col-md-12" style="background-color: rgba(255,255,255,0.8);margin-top: 20px;padding-top:15px;padding-bottom:15px" id="map-view">
+            <div style="position: absolute;z-index:999;width:50%;text-align: center;color:#ffffff;font-weight:bold;background-color: rgba(78,137,203,0.9);height:35px;line-height:35px;border-bottom-left-radius:20px;border-bottom-right-radius:20px;margin-left:25%;margin-right:25%;margin-top:-15px">Our Coverage</div>
+            <div style="margin-right: 25px; margin-top: 50px; border-radius: 3px; box-shadow: 4px 4px 5px gray; z-index: 9999; position: absolute; width: 100px; height: 30px; background-color: white; text-align:center;right: 0px;border: 1px solid #c0c0c0;">
+              <button ng-click="showMapAll()" style="color: #0072c6; width: 90px; height: 30px; background-color: transparent; border: 0px;outline: none">Overview</button>
+            </div>
+            <div id="map" style="height:100%;position: relative;z-index:1"></div>
         </div>
-        <div id="map" style="width:100%;height:100%"></div>
       </div>
     </div>
-    <div class="col-md-8 col-sm-12">
+    <div class="col-md-8 col-sm-12" id="area2">
       <!--location-->
       <div class="row">
         <div class="col-md-11" style="background-color: rgba(255,255,255,0.8);margin-top: 20px;margin-left:10px;">
