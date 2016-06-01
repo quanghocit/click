@@ -240,8 +240,8 @@
           <div class="margin_create_ads">
             <div class="col-xs-3 padding0"><span>- City:</span></div>
             <div class="col-xs-6 padding0">
-              <select class="form-control cusInput" ng-model="modelLocation" ng-change="city()">
-                <option ng-repeat="location in locations.slice().reverse()" value="{{location.id}}">{{location.city}}
+              <select class="form-control cusInput" ng-model="modelCity" ng-change="cityChange()">
+                <option ng-repeat="city in citys.slice().reverse()" value="{{city.id}}">{{city.city}}
                 </option>
               </select>
             </div>
@@ -250,8 +250,9 @@
           <div class="margin_create_ads">
             <div class="col-xs-3 padding0"><span>- Category:</span></div>
             <div class="col-xs-6 padding0">
-              <select class="form-control cusInput">
-                <option></option>
+              <select class="form-control cusInput" ng-model="modelCategory" ng-change="categoryChange()">
+                <option ng-repeat="category in categories.slice().reverse()" value="{{category.id}}">{{category.category}}
+                </option>
               </select>
             </div>
           </div>

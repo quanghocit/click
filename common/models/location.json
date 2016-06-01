@@ -6,13 +6,19 @@
     "validateUpsert": true
   },
   "properties": {
-    "city": {
+    "location": {
       "type": "string",
       "required": true
     },
-    "location": {
-      "type": "string",
-      "default": "[]"
+    "categoryId": {
+      "type": "number",
+      "required": true,
+      "default": ""
+    },
+    "cityId": {
+      "type": "number",
+      "required": true,
+      "default": ""
     }
   },
   "validations": [],

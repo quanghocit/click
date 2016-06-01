@@ -3,7 +3,7 @@
  */
 angular
   .module('app')
-  .controller('Campaign', ['$scope', 'Location', function ($scope, Location) {
+  .controller('Campaign', ['$scope', 'City', 'Category', 'Location', function ($scope, City, Category, Location) {
     $('.none').addClass("hidden");
     $('.campaign').removeClass("hidden");
 
@@ -173,16 +173,32 @@ angular
     var colHeight = $('.mainCampaign').height();
     $('.colCampaign').css('height', colHeight - 50);
 
-    console.log(Location.find());
-    $scope.locations = Location.find();
-
-    $scope.city = function () {
-      Location.findById({
-        id: $scope.modelLocation
+    $scope.citys = City.find();
+    console.log($scope.citys);
+    $scope.cityChange = function () {
+      $scope.categories = [];
+      City.findById({
+        id: $scope.modelCity
       }).$promise
         .then(function (data) {
-          $scope.locaOfCity = JSON.parse(data.location).data;
+          $scope.save = JSON.parse(data.categoryId).data;
+          $scope.save.forEach(function (data) {
+            Category.findById({
+              id: data
+            }).$promise
+              .then(function (data) {
+                $scope.categories.push({id:data.id, category: data.category});
+              })
+          });
         });
+    };
+
+    $scope.categoryChange = function () {
+      console.log($scope.modelCategory);
+    };
+
+    $scope.modalClick = function (){
+
     };
     $scope.ulocaOfCity = [];
 
@@ -196,15 +212,15 @@ angular
       $scope.ulocaOfCity.splice($scope.ulocaOfCity.indexOf(uloc), 1);
       $scope.locaOfCity.push(uloc);
     };
-    $scope.changeSearch = function () {
-      console.log($scope.locaOfCity);
-      console.log($scope.searchLocation);
-
-      var result = _.filter($scope.locaOfCity, function(key) {
-        return key.startsWith($scope.searchLocation);
-      })
-
-      console.log(result);
-    };
+    //$scope.changeSearch = function () {
+    //  console.log($scope.locaOfCity);
+    //  console.log($scope.searchLocation);
+    //
+    //  var result = _.filter($scope.locaOfCity, function(key) {
+    //    return key.startsWith($scope.searchLocation);
+    //  })
+    //
+    //  console.log(result);
+    //};
 
   }]);
