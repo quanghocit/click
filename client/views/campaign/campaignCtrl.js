@@ -58,12 +58,7 @@ angular
     $scope.divLocation = false;
     $scope.gender = "All";
     $scope.optionStep1 = "option1";
-    $scope.modalClick = function () {
-      $scope.divLocation = true;
-    };
-    $scope.okLocation = function () {
-      $scope.divLocation = false;
-    };
+
 
     $scope.next1_2 = function () {
       $('#campaign-icon').css('color', '#45E252');
@@ -176,6 +171,7 @@ angular
     $scope.citys = City.find();
     console.log($scope.citys);
     $scope.cityChange = function () {
+      console.log($scope.modelCity);
       $scope.categories = [];
       City.findById({
         id: $scope.modelCity
@@ -187,19 +183,29 @@ angular
               id: data
             }).$promise
               .then(function (data) {
-                $scope.categories.push({id:data.id, category: data.category});
+                $scope.categories.push({id: data.id, category: data.category});
               })
           });
         });
+    };
+    $scope.locaOfCity = [];
+    $scope.modalClick = function () {
+      $scope.divLocation = true;
+      Location.find({where: {
+          and: [{cityId: $scope.modelCity}, {categoryId: $scope.modelCategory}]
+        }
+      }, function (data, err) {
+        console.log(data);
+      });
+    };
+    $scope.okLocation = function () {
+      $scope.divLocation = false;
     };
 
     $scope.categoryChange = function () {
       console.log($scope.modelCategory);
     };
 
-    $scope.modalClick = function (){
-
-    };
     $scope.ulocaOfCity = [];
 
     $scope.selectItem = function (loc) {
