@@ -13,11 +13,13 @@
   <link href="vendor_custom/fonts/fontello/css/fontello.css" rel="stylesheet">
 
   <!-- Jquery UI css-->
-  <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+  <link href="vendor/jquery-ui/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
   <!-- Simpleweather css -->
   <link href="css/simpleweather.css" rel="stylesheet">
   <!-- rwd-table css -->
   <link rel="stylesheet" href="vendor/RWD-Table-Patterns/dist/css/rwd-table.min.css">
+  <!-- ui-grid css -->
+  <link rel="stylesheet" href="vendor/angular-ui-grid/ui-grid.css">
   <!-- the project core CSS file -->
   <link href="vendor_custom/css/style.css" rel="stylesheet">
   <!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
@@ -58,6 +60,16 @@
 
               <div class="collapse navbar-collapse" id="navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                  <li class="">
+                    <a ui-sref="management_home" ui-sref-active="" class=""  data-toggle="tooltip" title="Location">
+                      <i class="fa fa-home fa-1x"><span class="home none"> Home</span></i>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a ui-sref="management_location" ui-sref-active="" class=""  data-toggle="tooltip" title="Locations">
+                      <i class="fa fa-map-marker fa-1x"><span class="locations none"> Locations</span></i>
+                    </a>
+                  </li>
                   <li class="">
                     <a ui-sref="location" ui-sref-active="" class=""  data-toggle="tooltip" title="Location">
                       <i class="fa fa-location-arrow fa-1x"><span class="location none"> Location</span></i>
@@ -133,6 +145,8 @@
 <script src="vendor/jquery/dist/jquery.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
 
+<script src="vendor/jquery-ui/jquery-ui.js"></script>
+
 <script src="vendor/highcharts/highcharts.js"></script>
 
 <!-- Custom Scripts -->
@@ -141,6 +155,10 @@
 <script src="vendor/angular/angular.js"></script>
 <script src="vendor/angular-resource/angular-resource.js"></script>
 <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+<!--angular touch&animate&ui-grid-->
+<script src="vendor/angular-touch/angular-touch.js"></script>
+<script src="vendor/angular-animate/angular-animate.js"></script>
+<script src="vendor/angular-ui-grid/ui-grid.js"></script>
 
 <!-- Simple weather JS -->
 <script src="vendor/simpleWeather/jquery.simpleWeather.min.js"></script>
@@ -161,6 +179,7 @@
 <script src="js/app.js"></script>
 <script src="js/services/lb-services.js"></script>
 <script src="js/controllers/ctrl.js"></script>
+<script src="views/management/home/homeCtrl.js"></script>
 <script src="views/calendar/calendarCtrl.js"></script>
 <script src="views/campaign/campaignCtrl.js"></script>
 <script src="views/location/locationCtrl.js"></script>
@@ -168,8 +187,7 @@
 <script src="views/users/usersCtrl.js"></script>
 <script src="views/hotspots/hotspotsCtrl.js"></script>
 <script src="views/report/reportCtrl.js"></script>
-
 <script src="vendor/lodash/lodash.js"></script>
-
+<script src="views/management/location/locationCtrl.js"></script>
 </body>
 </html>
