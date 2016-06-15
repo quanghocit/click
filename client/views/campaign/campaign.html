@@ -14,13 +14,13 @@
       </div>
       <div class="col-xs-12 radius-50" style="height: 120px; overflow-y: auto;">
         <button style="border: none; background: #EBEBEB; font-weight: normal" class="input_campaign"
-                type="text" ng-repeat="loc in locaOfCity track by $index" ng-click="selectItem(loc)">{{loc}}
+                type="text" ng-repeat="loc in locaOfCity.slice().reverse()" ng-click="selectItem(loc)">{{loc.location}}
         </button>
       </div>
       <div class="col-xs-12 radius-50" style="height: 120px; overflow-y: auto; background-color: #4C4C4C">
         <p style="color: #ffffff">Selected</p>
         <button style="border: none; background: #2985D0; color: #ffffff; font-weight: normal" class="input_campaign"
-                type="text" ng-repeat="uloc in ulocaOfCity track by $index" ng-click="unselectItem(uloc)">{{uloc}}
+                type="text" ng-repeat="uloc in ulocaOfCity.slice().reverse()" ng-click="unselectItem(uloc)">{{uloc.location}}
         </button>
       </div>
       <button class="btn radius-50 btn-sm btn-default" style="float: right; margin-right: 20px" ng-click="okLocation()">

@@ -168,6 +168,19 @@ angular
     var colHeight = $('.mainCampaign').height();
     $('.colCampaign').css('height', colHeight - 50);
 
+    $scope.ulocaOfCity = [];
+
+    $scope.selectItem = function (loc) {
+      //console.log("Remove" + loc);
+      $scope.locaOfCity.splice($scope.locaOfCity.indexOf(loc), 1);
+      $scope.ulocaOfCity.push(loc);
+    };
+    $scope.unselectItem = function (uloc) {
+      //console.log("Remove" + uloc);
+      $scope.ulocaOfCity.splice($scope.ulocaOfCity.indexOf(uloc), 1);
+      $scope.locaOfCity.push(uloc);
+    };
+
     $scope.citys = City.find();
     console.log($scope.citys);
     $scope.cityChange = function () {
@@ -178,6 +191,7 @@ angular
       }).$promise
         .then(function (data) {
           $scope.save = JSON.parse(data.categoryId).data;
+          console.log($scope.saven);
           $scope.save.forEach(function (data) {
             Category.findById({
               id: data
@@ -187,16 +201,34 @@ angular
               })
           });
         });
+
+      array_new = $scope.categories.concat($scope.ulocaOfCity); //Tạo array mới chứa 2 array
+      for (var i = 0; i < $scope.categories.length; i++) { //Loop array_new trùng cộng lại, và xóa đi 1
+        for (var j = $scope.categories.length + 1; j < array_new.length; j++) {
+          if (array_new[i] == array_new[j]) {
+            array_new.splice(j, 1);
+          } else {
+            console.log("No duplicate");
+          }
+        }
+      }
+      console.log(array_new);
     };
-    $scope.locaOfCity = [];
+
+
     $scope.modalClick = function () {
+      $scope.locaOfCity = [];
       $scope.divLocation = true;
-      Location.find({where: {
-          and: [{cityId: $scope.modelCity}, {categoryId: $scope.modelCategory}]
+      Location.find({
+        "filter": {
+          "where": {and: [{cityId: $scope.modelCity}, {categoryId: $scope.modelCategory}]}
         }
       }, function (data, err) {
-        console.log(data);
+        data.forEach(function (value) {
+          $scope.locaOfCity.push({"id": value.id, "location": value.location});
+        })
       });
+      console.log($scope.locaOfCity);
     };
     $scope.okLocation = function () {
       $scope.divLocation = false;
@@ -206,18 +238,7 @@ angular
       console.log($scope.modelCategory);
     };
 
-    $scope.ulocaOfCity = [];
 
-    $scope.selectItem = function (loc) {
-      console.log("Remove" + loc);
-      $scope.locaOfCity.splice($scope.locaOfCity.indexOf(loc), 1);
-      $scope.ulocaOfCity.push(loc);
-    };
-    $scope.unselectItem = function (uloc) {
-      console.log("Remove" + uloc);
-      $scope.ulocaOfCity.splice($scope.ulocaOfCity.indexOf(uloc), 1);
-      $scope.locaOfCity.push(uloc);
-    };
     //$scope.changeSearch = function () {
     //  console.log($scope.locaOfCity);
     //  console.log($scope.searchLocation);
