@@ -1,7 +1,14 @@
 angular
   .module('app', [
     'ui.router',
-    'lbServices'
+    'lbServices',
+    'ngTouch',
+    'ui.grid',
+    'ui.grid.pagination',
+    'ui.grid.moveColumns',
+    'ui.grid.expandable',
+    'ui.grid.pinning',
+    'ui.grid.resizeColumns'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
       $urlRouterProvider) {
@@ -41,6 +48,16 @@ angular
         url: '/report',
         templateUrl: 'views/report/report.html',
         controller: 'Report'
+      })
+      .state('management_location', {
+        url: '/management_location',
+        templateUrl: 'views/management/location/location.html',
+        controller: 'ManagementLocation'
+      })
+      .state('management_home', {
+        url: '/management_home',
+        templateUrl: 'views/management/home/home.html',
+        controller: 'ManagementHome'
       })
       .state('forbidden', {
         url: '/forbidden',

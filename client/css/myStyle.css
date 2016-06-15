@@ -1,4 +1,6 @@
-body,html{}
+body,html{
+  color: #000000;
+}
 /*Scrollbar*/
 ::-webkit-scrollbar{
   width: 5px;
@@ -22,6 +24,87 @@ body,html{}
 ::-webkit-scrollbar-thumb:hover {
   background:#7d7d7d;
 }
+
+/*ui-grid*/
+.ui-grid-pager-control input {
+  height: 13px;
+  line-height: 13px;
+}
+
+.ui-grid-pager-control .ui-grid-pager-max-pages-number {
+  vertical-align: middle;
+}
+
+.colorHeader { color: #ffffff; background-color:#A1A1A1; font-weight: normal; height: 35px}
+
+.ui-grid-pager-control button {
+  background-color: #ffffff;
+  border: none;
+}
+
+.ui-grid-pager-control button:hover {
+  background-color: #ffffff;
+}
+
+.ui-grid-pager-control button:focus, .ui-grid-pager-control button.focus {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  outline: none;
+}
+
+.ui-grid-pager-control button:active, .ui-grid-pager-control button.active, .open > .dropdown-toggle.ui-grid-pager-control button {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  outline: none;
+}
+
+.ui-grid-pager-control button:active:focus {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  outline: none;
+}
+
+.ui-grid-row:nth-child(even) .ui-grid-cell {
+  background-color: #ffffff;
+  border-bottom: 1px solid #E6EAEB;
+}
+
+.ui-grid-row:nth-child(odd) .ui-grid-cell {
+  background-color: #ffffff;
+  border-bottom: 1px solid #E6EAEB;
+}
+
+.ui-grid-cell {
+  border-right: none;
+}
+
+.ui-grid-pinned-container.ui-grid-pinned-container-right .ui-grid-cell:first-child {
+  border-left: none;
+}
+
+.ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-cell:last-child {
+  border-right: none;
+}
+
+.ui-grid-row .ui-grid-cell.ui-grid-row-header-cell {
+  border-bottom: none;
+}
+
+.ui-grid-icon-plus-squared:before {
+  content: '\c358';
+}
+
+.ui-grid-icon-minus-squared:before {
+  content: '\c359';
+}
+
+.ui-grid-cell-contents {
+  cursor: pointer;
+}
+.ui-grid {
+  background-color: #ffffff;
+}
+/*ui-grid*/
 .step1-ot{
   min-height: 55px;
   line-height: 55px;
