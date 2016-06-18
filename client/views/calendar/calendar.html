@@ -1,3 +1,88 @@
-<section>
-  Calendar
-</section>
+<!--Show Location-->
+<div ng-show="divRegister"
+     style="position: fixed; height: 100%; width: 100%; z-index: 99999; top:10%; background-color: rgba(0,0,0,0.5)">
+  <div class="col-xs-10 col-xs-push-1 col-sm-6 col-sm-push-3 col-md-4 col-md-push-4" style="position: absolute; margin-top: 10%;">
+    <div class="col-xs-12" style="background-color:rgba(192,192,192,0.5); margin: auto; height: 40px">
+      <div class="col-xs-6 text-center" style="background-color:rgba(49,176,213,0.8);
+    margin-left: 20px; border-radius: 0px 0px 10px 10px; height: 30px; line-height: 30px; color: #ffffff">
+        Register Hotspot
+      </div>
+    </div>
+    <form class="form-horizontal" role="form" style="background-color: #ffffff; padding: 10px 10px; margin-top: 40px">
+      <div class="form-group">
+        <label for="name" class="col-sm-5 control-label hidden-xs">Name:</label>
+        <div class="col-sm-7">
+          <input type="email" class="form-control cusInput" id="name" placeholder="Name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="location" class="col-sm-5 control-label hidden-xs">Location:</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control cusInput" id="location" placeholder="Location">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="ap" class="col-sm-5 control-label hidden-xs">No. of Access Points:</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control cusInput" id="ap" placeholder="No. of Access Points">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="reach" class="col-sm-5 control-label hidden-xs">Monthly Reach:</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control cusInput" id="reach" placeholder="Monthly Reach">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="clicks" class="col-sm-5 control-label hidden-xs">Monthly Clicks:</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control cusInput" id="clicks" placeholder="Monthly Clicks">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="ctr" class="col-sm-5 control-label hidden-xs">CTR: </label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control cusInput" id="ctr" placeholder="CTR">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-5 col-sm-7">
+          <button type="button" class="btn radius-50 btn-default btn-sm" ng-click="Register()">Register</button>
+          <button type="reset" class="btn radius-50 btn-grey btn-sm"><i class="fa fa-refresh"></i> </button>
+          <button type="button" class="btn radius-50 btn-grey btn-sm" ng-click="hideRegister()">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<!--End Show Location-->
+
+<div class="col-xs-10 col-xs-push-1 mainHotspot" style="position:absolute; background-color:rgba(192,192,192,0.5); padding: 0px 0px;
+ margin: auto; height: 100%">
+  <div class="col-xs-5 col-sm-4 text-center" style="background-color:rgba(49,176,213,0.7);
+    margin-left: 20px; border-radius: 0px 0px 10px 10px; height: 30px; line-height: 30px; margin-bottom: 5px; color: #ffffff">
+    <p class="hidden-xs">Hotspots Management</p>
+
+    <p class="hidden-md">Hotspot</p>
+  </div>
+  <div class="col-xs-6 col-sm-3 col-sm-push-5 text-center" style="height: 30px; line-height: 30px; margin-bottom: 5px;">
+    <button class="btn radius-50 btn-sm btn-default" ng-click="showRegister()">
+      <i class="fa fa-edit"></i> Register <span class="hidden-xs">Hotspots</span>
+    </button>
+
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="col-xs-12" style="min-height:500px; background-color: #ffffff; margin: 0;">
+    <div class="row titlestep3">
+      Campaign Status
+    </div>
+    <div class="row" id="gridHeight">
+      <div ui-grid="gridCampaign" ui-grid-pinning ui-grid-move-columns style="height: 100%; text-align: center"></div>
+    </div>
+  </div>
+</div>
+
+
