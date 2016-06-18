@@ -3,7 +3,7 @@ angular
 .controller('ManagementHome', ['$scope', function($scope) {
   $('.none').addClass("hidden");
   $('.home').removeClass("hidden");
-  $('#blank').css("height", $('#dataerea').height()-32);
+  $('#blank').css("height", $('#data-area').height()-32);
 
 
 /******************************Grid********************************/

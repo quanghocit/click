@@ -35,8 +35,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 25px;
+  width: 50px;
+  height: 22px;
 }
 
 .switch input {display:none;}
@@ -56,8 +56,8 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 25px;
-  width: 25px;
+  height: 22px;
+  width: 22px;
   left: 0;
   bottom: 0;
   background-color: white;
@@ -74,15 +74,15 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(35px);
-  -ms-transform: translateX(35px);
-  transform: translateX(35px);
-  transform: translateX(35px);
+  -webkit-transform: translateX(28px);
+  -ms-transform: translateX(28px);
+  transform: translateX(28px);
+  transform: translateX(28px);
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 25px;
+  border-radius: 22px;
 }
 
 .slider.round:before {
