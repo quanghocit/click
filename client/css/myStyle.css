@@ -37,6 +37,8 @@ body,html{
 
 .colorHeader { color: #ffffff; background-color:#A1A1A1; font-weight: normal; height: 35px}
 
+.colorHeader2 { color: #ffffff; background-color:#A1A1A1; font-weight: normal; height: 35px; text-transform: uppercase}
+
 .ui-grid-pager-control button {
   background-color: #ffffff;
   border: none;
@@ -391,5 +393,12 @@ input[type=radio]:checked ~ .label_radio_device::before{
 .slideThree input[type=checkbox]:checked + label {
   left: 43px;
 }
+
+/*date range*/
+.dropdown-menu {
+  min-width: 0;
+}
+
+#daterangepicker:hover {cursor:pointer}
 
 

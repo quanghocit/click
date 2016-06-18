@@ -8,7 +8,8 @@ angular
     'ui.grid.moveColumns',
     'ui.grid.expandable',
     'ui.grid.pinning',
-    'ui.grid.resizeColumns'
+    'ui.grid.resizeColumns',
+    'ngBootstrap'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
       $urlRouterProvider) {
@@ -58,6 +59,21 @@ angular
         url: '/management_home',
         templateUrl: 'views/management/home/home.html',
         controller: 'ManagementHome'
+      })
+      .state('management_trends', {
+        url: '/management_trends',
+        templateUrl: 'views/management/trends/trends.html',
+        controller: 'ManagementTrends'
+      })
+      .state('management_users', {
+        url: '/management_users',
+        templateUrl: 'views/management/users/users.html',
+        controller: 'ManagementUsers'
+      })
+      .state('management_crm', {
+        url: '/management_crm',
+        templateUrl: 'views/management/crm/crm.html',
+        controller: 'ManagementCRM'
       })
       .state('forbidden', {
         url: '/forbidden',
